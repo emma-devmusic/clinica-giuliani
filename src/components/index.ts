@@ -10,3 +10,4 @@ export * from "./team/Team";
 export * from "./testimonials/Testimonials";
 export * from "./topbar/Topbar";
 export * from "./pageHeader/PageHeader";
+export * from "./tools/CounterUp";

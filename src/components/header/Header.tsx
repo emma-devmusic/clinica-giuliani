@@ -1,3 +1,5 @@
+import { CounterUp } from ".."
+
 
 export const Header = () => {
     return (
@@ -8,19 +10,19 @@ export const Header = () => {
                     <div className="row g-4">
                         <div className="col-sm-4">
                             <div className="border-start border-light ps-4">
-                                <h2 className="text-white mb-1" data-toggle="counter-up">123</h2>
+                                <CounterUp end={123} />
                                 <p className="text-light mb-0">Expert Doctors</p>
                             </div>
                         </div>
                         <div className="col-sm-4">
                             <div className="border-start border-light ps-4">
-                                <h2 className="text-white mb-1" data-toggle="counter-up">1234</h2>
+                                <CounterUp end={1234} />
                                 <p className="text-light mb-0">Medical Stuff</p>
                             </div>
                         </div>
                         <div className="col-sm-4">
                             <div className="border-start border-light ps-4">
-                                <h2 className="text-white mb-1" data-toggle="counter-up">12345</h2>
+                                <CounterUp end={12345} />
                                 <p className="text-light mb-0">Total Patients</p>
                             </div>
                         </div>
