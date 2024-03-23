@@ -7,7 +7,7 @@ export const AboutPage = () => {
             <PageHeader />
             <About />
             <Feature />
-            <Team />
+            <Team totalDoctors={4} />
         </>
     )
 }

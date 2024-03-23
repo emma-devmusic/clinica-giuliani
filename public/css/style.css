@@ -1,6 +1,7 @@
 /********** Template CSS **********/
 :root {
-    --primary: #0463FA;
+    /* --primary: #0463FA; */
+    --primary: #1A5899;
     --light: #EFF5FF;
     --dark: #1B2C51;
 }
@@ -369,7 +370,7 @@
 
 
 /*** Testimonial ***/
-.testimonial-carousel::before {
+/* .testimonial-carousel::before {
     position: absolute;
     content: "";
     top: 0;
@@ -389,7 +390,7 @@
     width: 0;
     background: linear-gradient(to left, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
     z-index: 1;
-}
+} */
 
 @media (min-width: 768px) {
     .testimonial-carousel::before,
@@ -405,27 +406,27 @@
     }
 }
 
-.testimonial-carousel .owl-item .testimonial-text {
+.testimonial-carousel .testimonial-text {
     background: var(--light);
     transform: scale(.8);
     transition: .5s;
 }
 
-.testimonial-carousel .owl-item.center .testimonial-text {
+.testimonial-carousel .center .testimonial-text {
     background: var(--primary);
     transform: scale(1);
 }
 
-.testimonial-carousel .owl-item .testimonial-text *,
-.testimonial-carousel .owl-item .testimonial-item img {
+.testimonial-carousel  .testimonial-text *,
+.testimonial-carousel  .testimonial-item img {
     transition: .5s;
 }
 
-.testimonial-carousel .owl-item.center .testimonial-text * {
+.testimonial-carousel .center .testimonial-text * {
     color: var(--light) !important;
 }
 
-.testimonial-carousel .owl-item.center .testimonial-item img {
+.testimonial-carousel .center .testimonial-item img {
     background: var(--primary) !important;
 } 
 
@@ -441,22 +442,27 @@
     transition: .5s;
     z-index: 1;
 }
-
+.testimonial-carousel:hover {
+    cursor: grab;
+}
+.testimonial-carousel {
+    cursor: grabbing;
+}
 .testimonial-carousel:hover .owl-nav {
     width: 300px;
     opacity: 1;
 }
 
-.testimonial-carousel .owl-nav .owl-prev,
-.testimonial-carousel .owl-nav .owl-next {
+.testimonial-carousel  .owl-prev,
+.testimonial-carousel  .owl-next {
     position: relative;
     color: var(--primary);
     font-size: 45px;
     transition: .5s;
 }
 
-.testimonial-carousel .owl-nav .owl-prev:hover,
-.testimonial-carousel .owl-nav .owl-next:hover {
+.testimonial-carousel  .owl-prev:hover,
+.testimonial-carousel  .owl-next:hover {
     color: var(--dark);
 }
 
@@ -516,4 +522,26 @@
 
 .footer .copyright a:hover {
     color: var(--primary);
+}
+
+
+
+
+
+
+
+
+
+.bg-primary {
+    background-color: var(--primary)!important;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: var(--primary)!important;
+    border-color: var(--primary)!important;
+}
+
+.text-primary {
+    color: var(--primary)!important;
 }

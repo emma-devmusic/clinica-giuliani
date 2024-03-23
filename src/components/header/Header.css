@@ -1,0 +1,17 @@
+.slick-next {
+    display: none !important;
+}
+
+.slick-list {
+    mask-image: linear-gradient(270deg, #0463FA 75%, transparent);
+}
+
+.slick-list img{
+    mask-image: linear-gradient(rgb(0 0 0 / 100%), rgba(0, 0, 0, 0.594));
+}
+
+@media (max-width: 992px) {
+    .slick-list {
+        mask-image: linear-gradient(180deg, #0463FA 80%, transparent);
+    }
+}

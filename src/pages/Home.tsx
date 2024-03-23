@@ -12,7 +12,7 @@ export const Home = () => {
             <About />
             <Services />
             <Feature />
-            <Team />
+            <Team totalDoctors={4} />
             <Appointment />
             <Testimonials />
             <a href="#" className="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i className="bi bi-arrow-up"></i></a>
