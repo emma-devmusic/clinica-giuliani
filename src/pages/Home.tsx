@@ -1,5 +1,5 @@
 import { 
-    About, Appointment, Feature, Header, Services, Spinner, Team, Testimonials 
+    About, Appointment, Feature, Header, Services, Team, Testimonials 
 } from "../components/"
 
 
