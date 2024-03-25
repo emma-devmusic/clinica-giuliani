@@ -8,7 +8,7 @@ export const Feature = () => {
                     <div className="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.1s">
                         <div className="p-lg-5 ps-lg-0">
                             <p className="d-inline-block border rounded-pill text-light py-1 px-4">Features</p>
-                            <h1 className="text-white mb-4">Why Choose Us</h1>
+                            <h1 className="text-white mb-4">¿Por qué nosotros?</h1>
                             <p className="text-white mb-4 pb-2">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet</p>
                             <div className="row g-4">
                                 <div className="col-6">
@@ -17,8 +17,8 @@ export const Feature = () => {
                                             <i className="fa fa-user-md text-primary"></i>
                                         </div>
                                         <div className="ms-4">
-                                            <p className="text-white mb-2">Experience</p>
-                                            <h5 className="text-white mb-0">Doctors</h5>
+                                            <p className="text-white mb-2">Experiencia</p>
+                                            <h5 className="text-white mb-0">Doctores</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -28,8 +28,8 @@ export const Feature = () => {
                                             <i className="fa fa-check text-primary"></i>
                                         </div>
                                         <div className="ms-4">
-                                            <p className="text-white mb-2">Quality</p>
-                                            <h5 className="text-white mb-0">Services</h5>
+                                            <p className="text-white mb-2">Calidad</p>
+                                            <h5 className="text-white mb-0">Servicios</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -39,8 +39,8 @@ export const Feature = () => {
                                             <i className="fa fa-comment-medical text-primary"></i>
                                         </div>
                                         <div className="ms-4">
-                                            <p className="text-white mb-2">Positive</p>
-                                            <h5 className="text-white mb-0">Consultation</h5>
+                                            <p className="text-white mb-2">Disposición</p>
+                                            <h5 className="text-white mb-0">Consultas</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -50,8 +50,8 @@ export const Feature = () => {
                                             <i className="fa fa-headphones text-primary"></i>
                                         </div>
                                         <div className="ms-4">
-                                            <p className="text-white mb-2">24 Hours</p>
-                                            <h5 className="text-white mb-0">Support</h5>
+                                            <p className="text-white mb-2">24 horas</p>
+                                            <h5 className="text-white mb-0">Atención</h5>
                                         </div>
                                     </div>
                                 </div>

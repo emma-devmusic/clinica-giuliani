@@ -18,27 +18,27 @@ export const Footer = () => {
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-6">
-                        <h5 className="text-light mb-4">Services</h5>
-                        <a className="btn btn-link" href="">Cardiology</a>
-                        <a className="btn btn-link" href="">Pulmonary</a>
-                        <a className="btn btn-link" href="">Neurology</a>
-                        <a className="btn btn-link" href="">Orthopedics</a>
-                        <a className="btn btn-link" href="">Laboratory</a>
+                        <h5 className="text-light mb-4">Servicios</h5>
+                        <a className="btn btn-link" href="">Cardiología</a>
+                        <a className="btn btn-link" href="">Neumonología</a>
+                        <a className="btn btn-link" href="">Neurología</a>
+                        <a className="btn btn-link" href="">Ortopedia</a>
+                        <a className="btn btn-link" href="">Laboratorio</a>
                     </div>
                     <div className="col-lg-3 col-md-6">
-                        <h5 className="text-light mb-4">Quick Links</h5>
-                        <a className="btn btn-link" href="">About Us</a>
-                        <a className="btn btn-link" href="">Contact Us</a>
-                        <a className="btn btn-link" href="">Our Services</a>
-                        <a className="btn btn-link" href="">Terms & Condition</a>
-                        <a className="btn btn-link" href="">Support</a>
+                        <h5 className="text-light mb-4">Enlaces</h5>
+                        <a className="btn btn-link" href="">Sobre Nosotros</a>
+                        <a className="btn btn-link" href="">Contáctanos</a>
+                        <a className="btn btn-link" href="">Servicios</a>
+                        {/* <a className="btn btn-link" href="">Terms & Condition</a>
+                        <a className="btn btn-link" href="">Support</a> */}
                     </div>
                     <div className="col-lg-3 col-md-6">
                         <h5 className="text-light mb-4">Newsletter</h5>
                         <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
                         <div className="position-relative mx-auto" style={{maxWidth: "400px"}}>
-                            <input className="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email"/>
-                            <button type="button" className="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                            <input className="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Tu Correo"/>
+                            <button type="button" className="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Enviar</button>
                         </div>
                     </div>
                 </div>
@@ -47,13 +47,13 @@ export const Footer = () => {
                 <div className="copyright">
                     <div className="row">
                         <div className="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a className="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+                            &copy; <a className="border-bottom" href="#">Clinica Giuliani</a>, Todos Los Derechos Reservados.
                         </div>
                         <div className="col-md-6 text-center text-md-end">
                             {/* <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. */}
-                            Designed By <a className="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
-                            <br/>
-                            Distributed By <a className="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
+                            {/* Designed By <a className="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+                            <br/> */}
+                            <i>Potenciado por <a className="border-bottom" href="https://ding.com.ar" target="_blank">Ding</a></i>
                         </div>
                     </div>
                 </div>

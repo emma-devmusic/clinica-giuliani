@@ -1,8 +1,10 @@
-import { CounterUp } from ".."
+// import { CounterUp } from ".."
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './Header.css'
+import CountUp from "react-countup"
+
 const settings = {
     dots: true,
     infinite: true,
@@ -20,19 +22,25 @@ export const Header = () => {
                     <div className="row g-4">
                         <div className="col-sm-4">
                             <div className="border-start border-light ps-4">
-                                <CounterUp end={123} />
+                                <h2 className="text-white mb-1">
+                                    <CountUp end={123} />
+                                </h2>
                                 <p className="text-light mb-0">Especialistas</p>
                             </div>
                         </div>
                         <div className="col-sm-4">
                             <div className="border-start border-light ps-4">
-                                <CounterUp end={1234} />
+                                <h2 className="text-white mb-1">
+                                    <CountUp end={1234} />
+                                </h2>
                                 <p className="text-light mb-0">Medicos Clínicos</p>
                             </div>
                         </div>
                         <div className="col-sm-4">
                             <div className="border-start border-light ps-4">
-                                <CounterUp end={12345} />
+                                <h2 className="text-white mb-1">
+                                    <CountUp end={12345} />
+                                </h2>
                                 <p className="text-light mb-0">Total de Pacientes</p>
                             </div>
                         </div>

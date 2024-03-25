@@ -27,9 +27,9 @@ export const Navbar = () => {
                             <a href="404.html" className="dropdown-item">404 Page</a>
                         </div>
                     </div> */}
-                    <a href="contact" className="nav-item nav-link">Contact</a>
+                    <Link to="contact" className="nav-item nav-link">Contáctanos</Link>
                 </div>
-                <a href="" className="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Appointment<i className="fa fa-arrow-right ms-3"></i></a>
+                <Link to="" className="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Agendar turno<i className="fa fa-arrow-right ms-3"></i></Link>
             </div>
         </nav>
     )

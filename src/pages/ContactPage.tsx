@@ -11,8 +11,8 @@ export const ContactPage = () => {
                                 <i className="fa fa-map-marker-alt text-primary"></i>
                             </div>
                             <div className="ms-4">
-                                <p className="mb-2">Address</p>
-                                <h5 className="mb-0">123 Street, New York, USA</h5>
+                                <p className="mb-2">Dirección</p>
+                                <h5 className="mb-0">25 de mayo 541, Charata, Chaco</h5>
                             </div>
                         </div>
                     </div>
@@ -22,7 +22,7 @@ export const ContactPage = () => {
                                 <i className="fa fa-phone-alt text-primary"></i>
                             </div>
                             <div className="ms-4">
-                                <p className="mb-2">Call Us Now</p>
+                                <p className="mb-2">Llámanos</p>
                                 <h5 className="mb-0">+012 345 6789</h5>
                             </div>
                         </div>
@@ -33,16 +33,17 @@ export const ContactPage = () => {
                                 <i className="fa fa-envelope-open text-primary"></i>
                             </div>
                             <div className="ms-4">
-                                <p className="mb-2">Mail Us Now</p>
+                                <p className="mb-2">Escríbenos</p>
                                 <h5 className="mb-0">info@example.com</h5>
                             </div>
                         </div>
                     </div>
                     <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                         <div className="bg-light rounded p-5">
-                            <p className="d-inline-block border rounded-pill py-1 px-4">Contact Us</p>
-                            <h1 className="mb-4">Have Any Query? Please Contact Us!</h1>
-                            <p className="mb-4">The contact htmlForm is currently inactive. Get a functional and working contact htmlForm with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-htmlForm">Download Now</a>.</p>
+                            <p className="d-inline-block border rounded-pill py-1 px-4">Contacto</p>
+                            <h1 className="mb-4">¿Tienes Alguna Consulta? ¡Contáctanos!</h1>
+                            {/* <p className="mb-4">The contact htmlForm is currently inactive. Get a functional and working contact htmlForm with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-htmlForm">Download Now</a>.</p> */}
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, quae! Distinctio, tempore sint voluptates nobis necessitatibus ratione odio libero, praesentium nemo ipsam soluta autem? At beatae a quia quis sapiente?</p>
                             <form>
                                 <div className="row g-3">
                                     <div className="col-md-6">
@@ -54,23 +55,23 @@ export const ContactPage = () => {
                                     <div className="col-md-6">
                                         <div className="form-floating">
                                             <input type="email" className="form-control" id="email" placeholder="Your Email"/>
-                                            <label htmlFor="email">Your Email</label>
+                                            <label htmlFor="email">Correo</label>
                                         </div>
                                     </div>
                                     <div className="col-12">
                                         <div className="form-floating">
                                             <input type="text" className="form-control" id="subject" placeholder="Subject"/>
-                                            <label htmlFor="subject">Subject</label>
+                                            <label htmlFor="subject">Asunto</label>
                                         </div>
                                     </div>
                                     <div className="col-12">
                                         <div className="form-floating">
                                             <textarea className="form-control" placeholder="Leave a message here" id="message" style={{height: "100px"}}></textarea>
-                                            <label htmlFor="message">Message</label>
+                                            <label htmlFor="message">Mensaje</label>
                                         </div>
                                     </div>
                                     <div className="col-12">
-                                        <button className="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                        <button className="btn btn-primary w-100 py-3" type="submit">Enviar</button>
                                     </div>
                                 </div>
                             </form>
