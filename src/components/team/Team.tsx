@@ -1,17 +1,11 @@
 import { useEffect, useState } from 'react';
+import { Profile } from './Profile';
+import { dataDoctors } from './dataDoctors';
 
 type TeamTypes = { totalDoctors: number }
 
 export const Team = ( {totalDoctors}:TeamTypes ) => {
 
-    const [arrayDoctors, setArray] = useState<number[]>([])
-    useEffect(() => {
-        let array = []
-        for (let i = 1; i <= totalDoctors; i++) {
-            array.push(i)
-        }
-        setArray(array)
-    }, [])
     
     return (
         <div className="container-xxl py-5">
@@ -22,24 +16,13 @@ export const Team = ( {totalDoctors}:TeamTypes ) => {
                 </div>
                 <div className="row g-4">
                     {
-                        arrayDoctors.map( (doc,i) => 
-
-                            <div className="col-lg-3 col-md-6 wow fadeInUp" key={i} data-wow-delay="0.1s">
-                                <div className="team-item position-relative rounded overflow-hidden">
-                                    <div className="overflow-hidden">
-                                        <img className="img-fluid" src={`img/team-${doc}.jpg`} alt=""/>
-                                    </div>
-                                    <div className="team-text bg-light text-center p-4">
-                                        <h5>Nombre</h5>
-                                        <p className="text-primary">Área</p>
-                                        <div className="team-social text-center">
-                                            <a className="btn btn-square" href=""><i className="fab fa-facebook-f"></i></a>
-                                            <a className="btn btn-square" href=""><i className="fab fa-twitter"></i></a>
-                                            <a className="btn btn-square" href=""><i className="fab fa-instagram"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        dataDoctors.map( (doc,i) => 
+                            (i < totalDoctors) && <Profile 
+                                docName={doc.firstName + ' ' + doc.lastName}
+                                area={doc.area}
+                                docImage={''}
+                                key={i}
+                            />
                         )
                     }
                     
