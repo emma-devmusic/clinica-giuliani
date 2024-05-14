@@ -6,7 +6,7 @@ export const ClinicaGiulianiApp = () => {
         <>
             <Topbar />
             <Navbar />
-                <Outlet />
+            <Outlet />
             <Footer />
         </>
     )

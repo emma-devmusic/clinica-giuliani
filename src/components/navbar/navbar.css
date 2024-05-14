@@ -2,12 +2,12 @@
     gap: 1rem;
 }
 .navbar-brand img {
-    max-width: 55px;
+    max-width: 150px;
     width: 100%;
     height: auto;
     border-radius: 50%;
     /* border: 1px solid rgb(199, 199, 199); */
-    box-shadow: 0 0 3px 0px #1A5899;
+    /* box-shadow: 0 0 3px 0px #1A5899; */
 }
 
 .navbar-brand h1 {

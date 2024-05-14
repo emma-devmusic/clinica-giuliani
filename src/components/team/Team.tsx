@@ -12,7 +12,7 @@ export const Team = ( {totalDoctors}:TeamTypes ) => {
         }
         setArray(array)
     }, [])
-    console.log(arrayDoctors)
+    
     return (
         <div className="container-xxl py-5">
             <div className="container">

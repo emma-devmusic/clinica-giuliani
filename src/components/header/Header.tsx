@@ -23,7 +23,15 @@ export const Header = () => {
                         <div className="col-sm-4">
                             <div className="border-start border-light ps-4">
                                 <h2 className="text-white mb-1">
-                                    <CountUp end={123} />
+                                    <CountUp end={28} />
+                                </h2>
+                                <p className="text-light mb-0">Médicos</p>
+                            </div>
+                        </div>
+                        <div className="col-sm-4">
+                            <div className="border-start border-light ps-4">
+                                <h2 className="text-white mb-1">
+                                    <CountUp end={26} />
                                 </h2>
                                 <p className="text-light mb-0">Especialistas</p>
                             </div>
@@ -31,28 +39,20 @@ export const Header = () => {
                         <div className="col-sm-4">
                             <div className="border-start border-light ps-4">
                                 <h2 className="text-white mb-1">
-                                    <CountUp end={1234} />
+                                    <CountUp end={60} />
                                 </h2>
-                                <p className="text-light mb-0">Medicos Clínicos</p>
-                            </div>
-                        </div>
-                        <div className="col-sm-4">
-                            <div className="border-start border-light ps-4">
-                                <h2 className="text-white mb-1">
-                                    <CountUp end={12345} />
-                                </h2>
-                                <p className="text-light mb-0">Total de Pacientes</p>
+                                <p className="text-light mb-0">Años de Experiencia</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <div className=" header-carousel">
+                    <div className="header-carousel">
                     <Slider {...settings}>
                         <div className="carousel-item">
                             <img className="img-fluid" src="img/carousel-1.jpg" alt=""/>
                             <div className="owl-carousel-text">
-                                <h1 className="display-1 text-white mb-0">Cardiología</h1>
+                                <h1 className="display-1 text-white mb-0">Ginecología</h1>
                             </div>
                         </div>
                         <div className="carousel-item">
@@ -64,7 +64,7 @@ export const Header = () => {
                         <div className="carousel-item">
                             <img className="img-fluid" src="img/carousel-3.jpg" alt=""/>
                             <div className="owl-carousel-text">
-                                <h1 className="display-1 text-white mb-0">Laboratorio</h1>
+                                <h1 className="display-1 text-white mb-0">Cardiología</h1>
                             </div>
                         </div>
                     </Slider>

@@ -14,12 +14,12 @@ export const About = () => {
                     <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                         <p className="d-inline-block border rounded-pill py-1 px-4">Sobre Nosotros</p>
                         <h1 className="mb-4">¿Por qué confiar en nosotros? ¡Conocé nuestra trayectoria!</h1>
-                        <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                        <p className="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum. Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos.</p>
+                        <p>En la Clínica Giuliani, tu salud es nuestra pasión. Con un equipo de profesionales médicos altamente calificados y tecnología de vanguardia, estamos comprometidos a proporcionarte la mejor atención posible. Desde el momento en que entras por nuestras puertas, te recibimos con calidez y empatía, asegurándonos de que te sientas seguro y cuidado en todo momento.</p>
+                        <p className="mb-4">Ya sea que necesites una consulta de rutina o un tratamiento especializado, estamos aquí para ti, brindándote cuidado médico integral y personalizado. Confía en nosotros para cuidar de ti y de tu familia, porque en la Clínica Giuliani, tu bienestar es nuestra prioridad número uno.</p>
                         <p><i className="far fa-check-circle text-primary me-3"></i>Atención sanitaria de calidad</p>
                         <p><i className="far fa-check-circle text-primary me-3"></i>Doctores Altamente Calificados</p>
                         <p><i className="far fa-check-circle text-primary me-3"></i>Profesionales de la investigación médica</p>
-                        <a className="btn btn-primary rounded-pill py-3 px-5 mt-3" href="">Más información</a>
+                        {/* <a className="btn btn-primary rounded-pill py-3 px-5 mt-3" href="">Más información</a> */}
                     </div>
                 </div>
             </div>
