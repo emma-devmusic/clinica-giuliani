@@ -1,7 +1,7 @@
 import { useState } from "react"
-import './services.css';
 import { dataServices } from "./data";
 import { Service } from "./Service";
+import './services.css';
 
 
 
@@ -10,7 +10,7 @@ export const Services = () => {
     const [ numServices, setNumServices ] = useState<number>(6);
 
     const handleShowServices = () => {
-        setNumServices( state => state !== 6 ? 6 : 12 )
+        setNumServices( state => state !== 6 ? 6 : 14 )
     }
 
     return (

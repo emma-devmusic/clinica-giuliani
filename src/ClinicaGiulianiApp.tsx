@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom"
+import { Outlet, ScrollRestoration } from "react-router-dom"
 import { Footer, Navbar, Topbar } from "./components"
 
 export const ClinicaGiulianiApp = () => {
@@ -7,6 +7,7 @@ export const ClinicaGiulianiApp = () => {
             <Topbar />
             <Navbar />
             <Outlet />
+            <ScrollRestoration />
             <Footer />
         </>
     )

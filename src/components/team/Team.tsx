@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Profile } from './Profile';
 import { dataDoctors } from './dataDoctors';
 
-type TeamTypes = { totalDoctors: number }
+type TeamTypes = { totalDoctors: number | 'all' }
 
 export const Team = ( {totalDoctors}:TeamTypes ) => {
 
@@ -16,14 +16,25 @@ export const Team = ( {totalDoctors}:TeamTypes ) => {
                 </div>
                 <div className="row g-4">
                     {
-                        dataDoctors.map( (doc,i) => 
-                            (i < totalDoctors) && <Profile 
+                        dataDoctors.map( (doc,i) => {
+                            if(typeof totalDoctors === 'string') {
+                                return <Profile 
                                 docName={doc.firstName + ' ' + doc.lastName}
                                 area={doc.area}
                                 docImage={''}
                                 key={i}
+                                id={i}
                             />
-                        )
+                            } else {
+                                return (i < totalDoctors) && <Profile 
+                                docName={doc.firstName + ' ' + doc.lastName}
+                                area={doc.area}
+                                docImage={''}
+                                key={i}
+                                id={i}
+                            />
+                            }
+                        })
                     }
                     
                 </div>

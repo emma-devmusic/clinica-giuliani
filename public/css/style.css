@@ -239,7 +239,7 @@
     background: url(../img/header-page.jpg) top center no-repeat;
     background-size: cover;
     text-shadow: 0 0 30px rgba(0, 0, 0, .1);
-}
+    }
 
 .breadcrumb-item + .breadcrumb-item::before {
     color: var(--light);
@@ -310,13 +310,13 @@
 
 .team-item .team-text {
     position: relative;
-    height: 100px;
+    height: 160px;
     transition: .5s;
 }
 
 .team-item:hover .team-text {
     margin-top: -60px;
-    height: 160px;
+    height: 180px;
 }
 
 .team-item .team-text .team-social {

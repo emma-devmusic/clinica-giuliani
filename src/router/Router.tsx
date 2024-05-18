@@ -1,8 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
-import { AboutPage, ErrorPage, Home, ServicesPage } from "../pages";
+import { AboutPage, ErrorPage, Home, ServicesPage, TeamPage, ContactPage, ProfilePage, ServicePage } from "../pages";
 import { ClinicaGiulianiApp } from "../ClinicaGiulianiApp";
-import { TeamPage } from "../pages/TeamPage";
-import { ContactPage } from "../pages/ContactPage";
 
 export const router = createBrowserRouter([
     {
@@ -23,8 +21,16 @@ export const router = createBrowserRouter([
           element: <ServicesPage />,  
         },
         {
+          path: "services/:idService",
+          element: <ServicePage />,  
+        },
+        {
           path: "team",
-          element: <TeamPage />,  
+          element: <TeamPage />,
+        },
+        {
+          path: "profile/:idProfile",
+          element: <ProfilePage />
         },
         {
           path: "",

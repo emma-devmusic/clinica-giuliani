@@ -1,0 +1,6 @@
+.page-header-background {
+    background-color: rgba(0, 0, 0, 0.234);
+    position: relative;
+    z-index: 50;
+    width: 100%;
+}

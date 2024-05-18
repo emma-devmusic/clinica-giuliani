@@ -1,5 +1,14 @@
+import { useState } from "react"
+import { useForm } from "../hooks/useForm"
 
 export const ContactPage = () => {
+
+    const [] = useForm({
+        name: '',
+        email: '',
+        phone: '',
+        doctor: ''
+    })
 
     return (
         <div className="container-xxl py-5">
