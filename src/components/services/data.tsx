@@ -1,5 +1,4 @@
-import { CardioInfantil, Cirugia, Neurologia, Pediatria, Traumatologia } from './serviceSections';
-import { Cardiologia } from './serviceSections/Cardiologia';
+import { Gastroenterologia, CardioInfantil, Cirugia, ClinicaMedica, Neurologia, Pediatria, Traumatologia, Cardiologia, Laboratorio, Otorrinolaringologia } from './serviceSections';
 const data = [
     {
         icon: <i className="fa fa-heartbeat text-primary fs-4"></i>,
@@ -72,8 +71,8 @@ const data = [
         name: 'Clínica Médica',
         link: 'clinica-medica',
         specialist: ['Zinser, Betiana'],
-        paragraph: '',
-        section: <section></section>,
+        paragraph: 'En la Clínica Giuliani, nuestro departamento de Clínica Médica se dedica a proporcionar atención médica integral para todas las edades. Nuestro equipo de médicos clínicos está comprometido con el diagnóstico, tratamiento y prevención de enfermedades comunes, así como con la promoción de la salud y el bienestar general de nuestros pacientes.',
+        section: <ClinicaMedica />,
         facilities: '',
         technology: ''
     },
@@ -82,8 +81,8 @@ const data = [
         name: 'Gastroenterología',
         link: 'gastroenterologia',
         specialist: ['Martinez, Cesar'],
-        paragraph: '',
-        section: <section></section>,
+        paragraph: 'En la Clínica Giuliani, nuestro departamento de Gastroenterología está dedicado a brindar atención médica especializada para el diagnóstico, tratamiento y prevención de enfermedades del sistema digestivo. Nuestro equipo de gastroenterólogos experimentados se compromete a ofrecer una atención integral y personalizada para asegurar la salud y el bienestar de nuestros pacientes.',
+        section: <Gastroenterologia />,
         facilities: '',
         technology: ''
     },
@@ -92,8 +91,8 @@ const data = [
         name: 'Laboratorio',
         link: 'laboratorio',
         specialist: ['Maluk, Daniel', 'Alvarez, Lourdes'],
-        paragraph: '',
-        section: <section></section>,
+        paragraph: 'En la Clínica Giuliani, nuestro laboratorio clínico se dedica a proporcionar servicios de diagnóstico de la más alta calidad. Nuestro equipo de profesionales altamente capacitados y nuestra tecnología de última generación nos permiten ofrecer resultados precisos y rápidos, fundamentales para la toma de decisiones médicas informadas.',
+        section: <Laboratorio />,
         facilities: '',
         technology: ''
     },
@@ -102,8 +101,8 @@ const data = [
         name: 'Otorrinolaringología',
         link: 'otorrinolaringologia',
         specialist: ['Obregon, Luis'],
-        paragraph: '',
-        section: <section></section>,
+        paragraph: 'En nuestra Clínica, el departamento de Otorrinolaringología está dedicado a brindar atención especializada para el diagnóstico y tratamiento de enfermedades y trastornos del oído, nariz y garganta. Nuestro equipo de otorrinolaringólogos altamente capacitados está comprometido con la salud y el bienestar de nuestros pacientes, proporcionando cuidados de alta calidad y soluciones personalizadas.',
+        section: <Otorrinolaringologia />,
         facilities: '',
         technology: ''
     },

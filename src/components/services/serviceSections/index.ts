@@ -4,3 +4,7 @@ export * from './CardioInfantil';
 export * from './Pediatria';
 export * from './Neurologia';
 export * from './Traumatologia';
+export * from './ClinicaMedica';
+export * from './Gastroenterologia';
+export * from './Laboratorio';
+export * from './Otorrinolaringologia';
