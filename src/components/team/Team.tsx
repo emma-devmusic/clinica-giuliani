@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+
 import { Profile } from './Profile';
 import { dataDoctors } from './dataDoctors';
 
@@ -21,7 +21,7 @@ export const Team = ( {totalDoctors}:TeamTypes ) => {
                                 return <Profile 
                                 docName={doc.firstName + ' ' + doc.lastName}
                                 area={doc.area}
-                                docImage={''}
+                                docImage={doc.docImage || 'por-defecto'}
                                 key={i}
                                 id={i}
                             />
@@ -29,7 +29,7 @@ export const Team = ( {totalDoctors}:TeamTypes ) => {
                                 return (i < totalDoctors) && <Profile 
                                 docName={doc.firstName + ' ' + doc.lastName}
                                 area={doc.area}
-                                docImage={''}
+                                docImage={doc.docImage || 'por-defecto'}
                                 key={i}
                                 id={i}
                             />

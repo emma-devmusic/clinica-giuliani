@@ -7,8 +7,8 @@ export const About = () => {
                 <div className="row g-5">
                     <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                         <div className="d-flex flex-column">
-                            <img className="img-fluid rounded w-75 align-self-end" src="img/about-1.jpg" alt=""/>
-                            <img className="img-fluid rounded w-50 bg-white pt-3 pe-3" src="img/about-2.jpg" alt="" style={{ marginTop: "-25%"}}/>
+                            <img className="img-fluid rounded w-75 align-self-end" src="img/about-1.jpg" alt="Imagen de la clinica giuliani"/>
+                            <img className="img-fluid rounded w-50 bg-white pt-3 pe-3" src="img/about-2.jpg" alt="Imagen de la clinica giuliani" style={{ marginTop: "-25%"}}/>
                         </div>
                     </div>
                     <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s">

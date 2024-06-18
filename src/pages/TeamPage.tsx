@@ -7,7 +7,6 @@ export const TeamPage = () => {
         <>
             <PageHeader title='Equipo' />
             <Team totalDoctors={'all'}/>
-            
         </>
     )
 }

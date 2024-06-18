@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { AboutPage, ErrorPage, Home, ServicesPage, TeamPage, ContactPage, ProfilePage, ServicePage } from "../pages";
+import { AboutPage, ErrorPage, Home, ServicesPage, TeamPage, ProfilePage, ServicePage } from "../pages";
 import { ClinicaGiulianiApp } from "../ClinicaGiulianiApp";
 
 export const router = createBrowserRouter([
@@ -12,10 +12,10 @@ export const router = createBrowserRouter([
           path: "about",
           element: <AboutPage />,  
         },
-        {
-          path: "contact",
-          element: <ContactPage />,  
-        },
+        // {
+        //   path: "contact",
+        //   element: <ContactPage />,  
+        // },
         {
           path: "services",
           element: <ServicesPage />,  

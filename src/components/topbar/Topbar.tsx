@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 export const Topbar = () => {
     return (
@@ -16,13 +17,13 @@ export const Topbar = () => {
                 <div className="col-lg-5 px-5 text-end">
                     <div className="h-100 d-inline-flex align-items-center py-3 me-4">
                         <small className="fa fa-phone-alt text-primary me-2"></small>
-                        <small>+012 345 6789</small>
+                        <small>+54 9 3731 41-1724</small>
                     </div>
                     <div className="h-100 d-inline-flex align-items-center">
-                        <a className="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i className="fab fa-facebook-f"></i></a>
+                        <Link className="btn btn-sm-square rounded-circle bg-white text-primary me-1" to="https://www.facebook.com/clinica.giuliani" target="_blank"><i className="fab fa-facebook-f"></i></Link>
+                        <Link className="btn btn-sm-square rounded-circle bg-white text-primary me-0" to="https://www.instagram.com/clinica.giuliani/" target="_blank"><i className="fab fa-instagram"></i></Link>
                         {/* <a className="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i className="fab fa-twitter"></i></a> */}
                         {/* <a className="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i className="fab fa-linkedin-in"></i></a> */}
-                        <a className="btn btn-sm-square rounded-circle bg-white text-primary me-0" href=""><i className="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>

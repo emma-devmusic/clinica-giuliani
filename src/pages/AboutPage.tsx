@@ -1,5 +1,6 @@
 
 import { About, Feature, PageHeader, Team } from '../components'
+import { GallerySection } from '../components/gallery/GallerySection'
 
 export const AboutPage = () => {
     return (
@@ -7,6 +8,7 @@ export const AboutPage = () => {
             <PageHeader title='Sobre Nosotros' />
             <About />
             <Feature />
+            <GallerySection />
             <Team totalDoctors={4} />
         </>
     )

@@ -1,4 +1,5 @@
-import { Gastroenterologia, CardioInfantil, Cirugia, ClinicaMedica, Neurologia, Pediatria, Traumatologia, Cardiologia, Laboratorio, Otorrinolaringologia } from './serviceSections';
+import { Alergologia, Gastroenterologia, CardioInfantil, Cirugia, ClinicaMedica, Neurologia, Pediatria, Traumatologia, Cardiologia, Laboratorio, Otorrinolaringologia, Ecografia, Ginecologia, Mastologia, Tomografias, Radiografias, MaternoInfantil } from './serviceSections';
+
 const data = [
     {
         icon: <i className="fa fa-heartbeat text-primary fs-4"></i>,
@@ -35,11 +36,31 @@ const data = [
     },
     {
         icon: <i className="fa fa-brain text-primary fs-4"></i>,
-        name: 'Neurólogía',
+        name: 'Neurología',
         link: 'neurologia',
         specialist: ['Tomei, Mauricio'],
         paragraph: 'En la Clínica Giuliani, nuestro departamento de Neurología está dedicado a proporcionar atención integral para una variedad de trastornos del sistema nervioso. Ofrecemos diagnóstico, tratamiento y seguimiento para pacientes de todas las edades, desde niños hasta adultos mayores.',
         section: <Neurologia />,
+        facilities: '',
+        technology: ''
+    },
+    {
+        icon: <i className="fa fa-brain text-primary fs-4"></i>,
+        name: 'Tomografías',
+        link: 'tomografias',
+        specialist: ['Tomei, Mauricio'],
+        paragraph: 'En la Clínica Giuliani, ofrecemos un servicio de tomografías de última generación, diseñado para proporcionar imágenes de alta calidad y diagnósticos precisos. Nuestro equipo de profesionales altamente capacitados y nuestra avanzada tecnología garantizan una experiencia segura y eficiente.',
+        section: <Tomografias />,
+        facilities: '',
+        technology: ''
+    },
+    {
+        icon: <svg xmlns="http://www.w3.org/2000/svg" className="fs-2 text-primary" width="1em" height="1em" viewBox="0 0 56 56"><path fill="currentColor" d="M30.04 4.61c0-1.102-.938-2.04-2.04-2.04s-2.039.938-2.039 2.04v7.218c0 1.125.938 2.063 2.04 2.063c1.1 0 2.038-.938 2.038-2.063ZM14.944 17.851c.774.773 2.086.773 2.86 0c.797-.797.797-2.11 0-2.883l-5.063-5.11c-.773-.773-2.086-.796-2.883-.023c-.773.773-.773 2.086 0 2.883Zm22.97-2.649c-.774.774-.774 2.086 0 2.883c.796.773 2.132.773 2.905 0l5.11-5.11a2.066 2.066 0 0 0 0-2.906c-.774-.773-2.086-.773-2.883 0ZM51.39 30.04c1.101 0 2.039-.937 2.039-2.039s-.938-2.04-2.04-2.04h-7.218c-1.125 0-2.063.938-2.063 2.04s.938 2.039 2.063 2.039ZM4.609 25.961c-1.101 0-2.039.937-2.039 2.039s.938 2.039 2.04 2.039h7.242c1.125 0 2.062-.937 2.062-2.039s-.937-2.04-2.062-2.04ZM40.82 37.914c-.773-.773-2.109-.773-2.906 0c-.773.797-.773 2.11 0 2.883l5.133 5.133c.797.75 2.11.75 2.883 0c.796-.774.796-2.11 0-2.907Zm-30.75 5.11c-.796.773-.796 2.109-.023 2.882c.773.774 2.11.774 2.906.024l5.086-5.11a2.009 2.009 0 0 0 0-2.86c-.75-.796-2.086-.796-2.86 0Zm19.97 1.148c0-1.125-.938-2.063-2.04-2.063s-2.039.938-2.039 2.063v7.219c0 1.101.938 2.039 2.04 2.039c1.1 0 2.038-.938 2.038-2.04Z"/></svg>,
+        name: 'Radiografías',
+        link: 'radiografias',
+        specialist: ['Tomei, Mauricio'],
+        paragraph: 'En la Clínica Giuliani, ofrecemos un servicio de radiografías de alta calidad, utilizando tecnología avanzada para proporcionar diagnósticos precisos y rápidos. Nuestro equipo de profesionales capacitados y nuestra moderna infraestructura garantizan una atención segura y eficiente.',
+        section: <Radiografias />,
         facilities: '',
         technology: ''
     },
@@ -108,11 +129,11 @@ const data = [
     },
     {
         icon: <svg className="fs-4 text-primary" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M19 22.5q-.375 0-.7-.175t-.525-.475q-3.025-.55-5.337-2.7T9.2 13.85q-2.15 1-3.512 2.9T4.05 20.975q-.05.425-.337.725T3 22t-.712-.312t-.238-.738q.275-3.025 2.075-5.462T8.75 11.85q-.525-2.875-.088-5.187T10.5 2.925q.05-.6.475-1.012T12 1.5q.625 0 1.063.438T13.5 3t-.437 1.063T12 4.5h-.1q-.05 0-.125-.025q-.55.625-.875 1.538t-.425 2.037q.5-.5 1.163-.862t1.462-.563q.75-.2 1.613-.262t1.812.012q.2-.2.45-.288T17.5 6q.625 0 1.063.438T19 7.5t-.437 1.063T17.5 9q-.35 0-.687-.162t-.538-.463q-.825-.05-1.587.013t-1.363.262q-.975.325-1.537.95t-.713 1.6q.7-.125 1.188-.162T14.4 11q.2-.25.488-.375t.612-.125q.625 0 1.063.438T17 12t-.437 1.063t-1.063.437q-.325 0-.612-.125T14.4 13q-1.575 0-2.075.038T11.2 13.2q.325.85 1.275 1.3t2.475.5q.725.05 1.563-.025t1.687-.225q.2-.35.55-.55t.75-.2q.625 0 1.063.438T21 15.5t-.437 1.063T19.5 17q-.25 0-.462-.075t-.413-.225q-.85.15-1.662.238t-1.538.087t-1.375-.075t-1.225-.225q.95 1.225 2.313 2.063T18 19.9q.2-.2.463-.3t.537-.1q.625 0 1.063.438T20.5 21t-.437 1.063T19 22.5"></path></svg>,
-        name: 'Alergista',
-        link: 'alergista',
+        name: 'Alergología',
+        link: 'alergologia',
         specialist: ['Longoni, Natalia'],
-        paragraph: '',
-        section: <section></section>,
+        paragraph: 'En la Clínica Giuliani, nuestro servicio de Alergología está dedicado a proporcionar diagnóstico, tratamiento y manejo integral de alergias y enfermedades inmunológicas. Contamos con un equipo de alergólogos altamente capacitados que utilizan las técnicas más avanzadas para ofrecer soluciones personalizadas y efectivas a nuestros pacientes.',
+        section: <Alergologia />,
         facilities: '',
         technology: ''
     },
@@ -121,8 +142,8 @@ const data = [
         name: 'Ecografías',
         link: 'ecografias',
         specialist: ['Galeano, Raul', 'Rodriguez, Elio', 'Rodriguez, Cristian', 'Liva, Gustavo'],
-        paragraph: '',
-        section: <section></section>,
+        paragraph: 'En la Clínica Giuliani, nuestro servicio de Ecografías ofrece diagnósticos por imágenes de alta precisión para una variedad de condiciones médicas. Utilizamos tecnología de vanguardia para proporcionar imágenes detalladas y claras que ayudan a nuestros médicos a evaluar y diagnosticar eficazmente diversas patologías.',
+        section: <Ecografia />,
         facilities: '',
         technology: ''
     },
@@ -131,8 +152,8 @@ const data = [
         name: 'Ginecología',
         link: 'ginecologia',
         specialist: ['Ibarra, Sandra', 'Wendler, Gisela', 'Liva, Gustavo', 'Kapluk, Christian', 'Berecochea, Olga', 'Prividori, Gianela'],
-        paragraph: '',
-        section: <section></section>,
+        paragraph: 'En la Clínica Giuliani, nuestro servicio de Ginecología está dedicado a proporcionar una atención integral y personalizada para la salud de la mujer en todas las etapas de la vida. Nuestro equipo de ginecólogos altamente capacitados se enfoca en el diagnóstico, tratamiento y prevención de una amplia variedad de condiciones ginecológicas, asegurando el bienestar y la salud de nuestras pacientes.',
+        section: <Ginecologia />,
         facilities: '',
         technology: ''
     },
@@ -141,8 +162,18 @@ const data = [
         name: 'Mastología',
         link: 'mastologia',
         specialist: ['Berecochea, Olga', 'Prividori, Gianela'],
-        paragraph: '',
-        section: <section></section>,
+        paragraph: 'Atención especializada para la salud mamaria. Nuestros expertos mastólogos están comprometidos con el diagnóstico, tratamiento y prevención de enfermedades de las mamas, ofreciendo un cuidado integral y personalizado para cada paciente.',
+        section: <Mastologia />,
+        facilities: '',
+        technology: ''
+    },
+    {
+        icon: <svg className="fs-2 text-primary" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48"><g fill="currentColor" fillRule="evenodd" clipRule="evenodd"><path d="M8.978 8.354a49.1 49.1 0 0 1 30.045.002c2.483.799 3.58 3.548 2.644 5.875l-6.362 15.81l-.07.174c-.227.57-.48 1.206-.868 1.693c-.503.634-1.184.986-2.112 1.086a1 1 0 1 1-.214-1.988c.476-.052.637-.187.76-.342c.197-.247.343-.61.631-1.327l6.38-15.853c.542-1.35-.123-2.813-1.401-3.224a47.1 47.1 0 0 0-28.821-.002c-1.278.411-1.944 1.874-1.401 3.224l6.38 15.862c.286.712.431 1.072.626 1.319c.123.155.283.29.76.341a1 1 0 1 1-.217 1.989c-.927-.101-1.607-.454-2.11-1.088c-.385-.486-.638-1.12-.865-1.69l-.07-.176l-6.36-15.81c-.936-2.328.162-5.077 2.645-5.875"></path><path d="m18 26.5l.5 2l1.5 3V37l3.5 3l4.5-2.5v-6l2-3v-2L24 25zm7 5.5a1 1 0 1 0-2 0v4a1 1 0 1 0 2 0z"></path><path d="M19 23.064v1.807l.149-.057C20.253 24.399 21.872 24 24 24s3.747.4 4.851.814l.149.057v-1.807a8 8 0 0 0-.851-.378C27.253 22.351 25.872 22 24 22s-3.253.35-4.149.686a8 8 0 0 0-.851.378m10.406.24h-.001zM30 22.5l.6-.8a1 1 0 0 1 .4.8v4.289a5 5 0 0 1-.84 2.773l-.656.985A3 3 0 0 0 29 32.211v3.768a5 5 0 0 1-4 4.9V41a.992.992 0 0 0 1.499.853l2.118-1.257a4.394 4.394 0 0 1 5.986 1.475l.249.405a1 1 0 0 1-1.704 1.048l-.249-.404a2.394 2.394 0 0 0-3.261-.804l-2.118 1.257C25.525 44.757 23 43.32 23 41v-.121a5 5 0 0 1-4-4.9v-3.768a3 3 0 0 0-.504-1.664l-.656-.985A5 5 0 0 1 17 26.79V22.5a1 1 0 0 1 .4-.8l.6.8l-.6-.8l.002-.001l.001-.002l.005-.003l.01-.007a2 2 0 0 1 .127-.088a6 6 0 0 1 .34-.205a9 9 0 0 1 1.264-.58C20.253 20.399 21.872 20 24 20s3.747.4 4.851.814a9 9 0 0 1 1.264.58a6 6 0 0 1 .467.293l.01.007l.005.004h.001l.002.002zm-11.406 4.804h.001l.002-.002h.002m-.005.002l.005-.003l.043-.03a4 4 0 0 1 .37-.213a3 3 0 0 0 .492 1.395l.656.985A5 5 0 0 1 21 32.21v3.768a3 3 0 1 0 6 0V32.21a5 5 0 0 1 .84-2.773l.656-.985a3 3 0 0 0 .492-1.395a6 6 0 0 1 .37.214l.048.032h-.001l-.002-.002H29.4s0-.002.382-.513L30 26.5m-1.012.558a8 8 0 0 0-.84-.372C27.254 26.351 25.873 26 24 26s-3.253.35-4.149.686a8 8 0 0 0-.839.372M18.01 16.993a10 10 0 0 1 12.008.02a1 1 0 0 1-1.204 1.598a8 8 0 0 0-9.606-.017a1 1 0 1 1-1.198-1.601"></path><path d="M18.642 12.066A14 14 0 0 1 33.9 15.1a1 1 0 0 1-1.415 1.415a12 12 0 0 0-16.97 0A1 1 0 0 1 14.1 15.1c1.3-1.3 2.844-2.33 4.542-3.034"></path></g></svg>,
+        name: 'Sector Maternal',
+        link: 'materno-infantil',
+        specialist: ['Galeano, Raul', 'Rodriguez, Elio', 'Rodriguez, Cristian', 'Liva, Gustavo'],
+        paragraph: 'En la Clínica Giuliani, nuestra Sala Materno Infantil está dedicada a brindar la mejor atención a madres y recién nacidos, con un enfoque centrado en el bienestar y la comodidad durante el embarazo, el parto y el postparto. Nuestro equipo de profesionales altamente capacitados y nuestras modernas instalaciones garantizan una experiencia segura y reconfortante.',
+        section: <MaternoInfantil />,
         facilities: '',
         technology: ''
     },
@@ -155,3 +186,5 @@ export const dataServices = data.map((data, i) => {
         ...data
     }
 })
+
+console.log(dataServices)

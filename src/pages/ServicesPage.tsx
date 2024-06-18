@@ -1,4 +1,4 @@
-import { Appointment, PageHeader, Services, Testimonials } from "../components"
+import { Appointment, PageHeader, Services } from "../components"
 
 
 export const ServicesPage = () => {
@@ -7,7 +7,7 @@ export const ServicesPage = () => {
             <PageHeader title="Servicios" />
             <Services />
             <Appointment />
-            <Testimonials />
+            {/* <Testimonials /> */}
         </>
     )
 }

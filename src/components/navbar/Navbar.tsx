@@ -28,9 +28,9 @@ export const Navbar = () => {
                             <a href="404.html" className="dropdown-item">404 Page</a>
                         </div>
                     </div> */}
-                    <Link to="contact" className="nav-item nav-link">Contáctanos</Link>
+                    {/* <Link to="contact" className="nav-item nav-link">Contacto</Link> */}
                 </div>
-                <Link to="" className="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Agendar turno<i className="fa fa-arrow-right ms-3"></i></Link>
+                <Link to="/#appointment" className="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Agendar turno<i className="fa fa-arrow-right ms-3"></i></Link>
             </div>
         </nav>
     )

@@ -4,7 +4,6 @@ import { dataServices } from "../components/services/data"
 import { Service } from "../types"
 import { Profile } from "../components/team"
 import { dataDoctors } from "../components/team/dataDoctors"
-import { useState } from "react"
 
 
 
@@ -23,9 +22,7 @@ export const ServicePage = () => {
                     <div className="d-flex align-items-center justify-content-between gap-2">
                         <h1 className="mb-0">{name}</h1>
                         <div className="d-inline-flex align-items-center justify-content-center bg-light rounded-circle" style={{ width: "65px", height: "65px" }}>
-                            {
-                                icon
-                            }
+                            { icon }
                         </div>
                     </div>
                     <hr className="m-5" />
@@ -87,7 +84,7 @@ export const ServicePage = () => {
                                     return <Profile
                                         docName={doctor.firstName + ' ' + doctor.lastName}
                                         area={doctor.area}
-                                        docImage={''}
+                                        docImage={ doctor.docImage || 'por-defecto'}
                                         key={i}
                                         id={i}
                                     />

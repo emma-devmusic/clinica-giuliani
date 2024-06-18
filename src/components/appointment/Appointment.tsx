@@ -4,7 +4,7 @@ import './appointment.css'
 export const Appointment = () => {
 
     return (
-        <div className="container-xl py-5">
+        <div className="container-xl py-5" id='appointment'>
             <div className="container">
                 <div className="">
                     <div className="row  g-3 wow fadeInUp" data-wow-delay="0.1s">

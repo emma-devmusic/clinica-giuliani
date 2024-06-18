@@ -15,7 +15,6 @@ export const Cirugia = () => {
                 <li className=""><strong>Cirugía Mayor:</strong> Intervenciones que implican un mayor riesgo y suelen requerir una estancia hospitalaria.</li>
                 <li className=""><strong>Cirugía Menor:</strong> Procedimientos más simples y de menor riesgo, a menudo realizados de manera ambulatoria.</li>
                 <li className=""><strong>Cirugía Laparoscópica:</strong> Técnicas mínimamente invasivas que utilizan pequeñas incisiones y una cámara para guiar el procedimiento.</li>
-                <li className=""><strong>Cirugía Robótica:</strong> Uso de sistemas robóticos avanzados para realizar procedimientos con alta precisión.</li>
             </ul>
         </section>
     )

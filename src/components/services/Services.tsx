@@ -10,7 +10,7 @@ export const Services = () => {
     const [ numServices, setNumServices ] = useState<number>(6);
 
     const handleShowServices = () => {
-        setNumServices( state => state !== 6 ? 6 : 14 )
+        setNumServices( state => state !== 6 ? 6 : 17 )
     }
 
     return (

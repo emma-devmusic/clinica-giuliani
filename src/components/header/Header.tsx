@@ -50,21 +50,21 @@ export const Header = () => {
                     <div className="header-carousel">
                     <Slider {...settings}>
                         <div className="carousel-item">
-                            <img className="img-fluid" src="img/carousel-1.jpg" alt=""/>
+                            <img className="img-fluid w-100" src="img/services/cardio-infantil.jpg" alt=""/>
                             <div className="owl-carousel-text">
-                                <h1 className="display-1 text-white mb-0">Ginecología</h1>
+                                <h1 className="display-1 text-white mb-0">Cardio Infantil</h1>
                             </div>
                         </div>
                         <div className="carousel-item">
-                            <img className="img-fluid" src="img/carousel-2.jpg" alt=""/>
+                            <img className="img-fluid w-100" src="img/services/traumatologia.jpg" alt=""/>
                             <div className="owl-carousel-text">
                                 <h1 className="display-1 text-white mb-0">Traumatología</h1>
                             </div>
                         </div>
                         <div className="carousel-item">
-                            <img className="img-fluid" src="img/carousel-3.jpg" alt=""/>
+                            <img className="img-fluid w-100" src="img/services/ginecologia.jpg" alt=""/>
                             <div className="owl-carousel-text">
-                                <h1 className="display-1 text-white mb-0">Cardiología</h1>
+                                <h1 className="display-1 text-white mb-0">Ginecología</h1>
                             </div>
                         </div>
                     </Slider>

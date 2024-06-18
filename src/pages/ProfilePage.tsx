@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom"
 import { dataDoctors } from "../components/team/dataDoctors"
-import image from '../assets/img/team-2.jpg'
 import { PageHeader } from "../components"
 import { dataServices } from "../components/services/data"
 import { Service } from "../components/services/Service"
@@ -9,6 +8,9 @@ export const ProfilePage = () => {
     const params = useParams()
     const doctor = dataDoctors[parseInt(params.idProfile || '')]
     const name = doctor.firstName + ' ' + doctor.lastName
+
+    console.log(doctor.docImage)
+
     return (
         <>
             <PageHeader title="Perfil" />
@@ -18,7 +20,7 @@ export const ProfilePage = () => {
                     <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div className=" position-relative rounded overflow-hidden">
                             <div className="overflow-hidden">
-                                <img className="img-fluid" src={image} alt="" />
+                                <img className="img-fluid" src={`/img/doctors/${doctor.docImage}.jpg`} alt="Imagen Doctor" />
                             </div>
                             <div className="team-text bg-light text-center p-4">
                                 {/* <h5>{name}</h5> */}
