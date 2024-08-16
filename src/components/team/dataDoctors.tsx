@@ -67,7 +67,7 @@ export const dataDoctors = [
         firstName: "Elias Hernan",
         docImage: 'elias-castillo',
         tuition: "-",
-        area: ["Jefe de Internación Sala Común"],
+        area: ["Jefe de Internación Sala Común", "Clínica Médica", "Internacion"],
         publicServiceMode: "",
         schedules: "",
         days: "Todos los Días",
@@ -79,7 +79,7 @@ export const dataDoctors = [
         firstName: "Mabel Florencia",
         // docImage: 'mabel-florencia-ramos',
         tuition: "-",
-        area: ["Jefa de Sala en Terapia Intensiva", "Unidad Coronaria"],
+        area: ["Jefa de Sala en Terapia Intensiva", "Unidad Coronaria", "Clínica Médica"],
         publicServiceMode: "",
         schedules: "",
         days: "Todos los Días",
@@ -300,5 +300,41 @@ export const dataDoctors = [
         schedules: "",
         days: "",
         description: "El Dr. Jorge Bolgietti se especializa en Guardias Rotativas y atiende a pacientes con diversos casos médicos, ofreciendo atención mediante orden de llegada en la clínica."
-    }
+    },
+    {
+        id: 28,
+        lastName: "Esponda",
+        firstName: "Alvaro",
+        // docImage: 'jorge-boglietti',
+        tuition: "-",
+        area: ["Urología"],
+        publicServiceMode: "Turno Programado",
+        schedules: "Hora Indicada",
+        days: "*Con aviso en las redes sociales",
+        description: "El Dr. Álvaro Esponda es especialista en Urología y se dedica al diagnóstico y tratamiento de enfermedades del sistema urinario y reproductivo masculino. Brinda consultas con turno programado y hora indicada todos los días en la clínica."
+    },
+    {
+        id: 29,
+        lastName: "Popolizio",
+        firstName: "Gabriel",
+        // docImage: 'jorge-boglietti',
+        tuition: "-",
+        area: ["Tomografías"],
+        publicServiceMode: "Turno Programado",
+        schedules: "Hora Indicada",
+        days: "*Con aviso en las redes sociales",
+        description: "Gabriel Popolizio es el jefe de Diagnóstico por Imagen en la Clínica Giuliani. Especializado en radiografía y tomografía, Gabriel se encarga de coordinar y supervisar todos los procedimientos de diagnóstico por imagen realizados en la clínica. Su dedicación y experiencia aseguran que cada paciente reciba un diagnóstico preciso y oportuno, mejorando así el tratamiento y la atención general."
+    },
+    {
+        id: 30,
+        lastName: "Loto",
+        firstName: "Cecilia",
+        // docImage: 'jorge-boglietti',
+        tuition: "-",
+        area: ["Tomografías"],
+        publicServiceMode: "Turno Programado",
+        schedules: "Hora Indicada",
+        days: "*Con aviso en las redes sociales",
+        description: "Cecilia Loto es especialista en Diagnóstico por Imagen en la Clínica Giuliani. Con una amplia experiencia en radiografía y tomografía, Cecilia se dedica a realizar procedimientos de diagnóstico por imagen con precisión y cuidado. Su enfoque profesional y detallado asegura que cada paciente reciba un diagnóstico exacto y de alta calidad, contribuyendo significativamente al proceso de tratamiento y atención médica en la clínica."
+    },
 ]

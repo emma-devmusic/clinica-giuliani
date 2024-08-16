@@ -20,7 +20,7 @@ export const ProfilePage = () => {
                     <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div className=" position-relative rounded overflow-hidden">
                             <div className="overflow-hidden">
-                                <img className="img-fluid" src={`/img/doctors/${doctor.docImage}.jpg`} alt="Imagen Doctor" />
+                                <img className="img-fluid" src={`/img/doctors/${doctor.docImage || 'por-defecto'}.jpg`} alt="Imagen Doctor" />
                             </div>
                             <div className="team-text bg-light text-center p-4">
                                 {/* <h5>{name}</h5> */}

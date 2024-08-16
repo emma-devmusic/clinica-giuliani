@@ -22,7 +22,7 @@ export const ServicePage = () => {
                     <div className="d-flex align-items-center justify-content-between gap-2">
                         <h1 className="mb-0">{name}</h1>
                         <div className="d-inline-flex align-items-center justify-content-center bg-light rounded-circle" style={{ width: "65px", height: "65px" }}>
-                            { icon }
+                            {icon}
                         </div>
                     </div>
                     <hr className="m-5" />
@@ -38,7 +38,7 @@ export const ServicePage = () => {
                             }} />
                         </div>
                     </div>
-                    
+
                     <hr className="m-5" />
 
                     {section}
@@ -73,24 +73,35 @@ export const ServicePage = () => {
                     </div>
 
                     <hr className="m-5" />
+                    {
+                        params.idService === 'radiografias'
+                            ? <></>
+                            : <>
+                                <h3 className="mb-5">
+                                    {
+                                        `${(params.idService === 'radiografias' || params.idService === 'tomografias')
+                                            ? 'Equipo Técnico'
+                                            : 'Equipo Médico'}`
+                                    }
+                                </h3>
+                                <div className="row g-4">
+                                    {
+                                        dataDoctors.map((doctor, i) => {
+                                            const dr = `${doctor.lastName}, ${doctor.firstName}`;
 
-                    <h3 className="mb-5">Equipo Médico</h3>
-                    <div className="row g-4">
-                        {
-                            dataDoctors.map((doctor, i) => {
-                                const dr = `${doctor.lastName}, ${doctor.firstName}`;
-
-                                if (specialist.includes(dr))
-                                    return <Profile
-                                        docName={doctor.firstName + ' ' + doctor.lastName}
-                                        area={doctor.area}
-                                        docImage={ doctor.docImage || 'por-defecto'}
-                                        key={i}
-                                        id={i}
-                                    />
-                            })
-                        }
-                    </div>
+                                            if (specialist.includes(dr))
+                                                return <Profile
+                                                    docName={doctor.firstName + ' ' + doctor.lastName}
+                                                    area={doctor.area}
+                                                    docImage={doctor.docImage || 'por-defecto'}
+                                                    key={i}
+                                                    id={i}
+                                                />
+                                        })
+                                    }
+                                </div>
+                            </>
+                    }
                 </div>
             </div>
         </div>

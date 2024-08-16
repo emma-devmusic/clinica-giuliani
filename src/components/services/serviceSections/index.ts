@@ -15,3 +15,6 @@ export * from './Mastologia';
 export * from './Tomografias';
 export * from './Radiografias';
 export * from './MaternoInfantil';
+export * from './Internacion';
+export * from './TerapiaIntensiva';
+export * from './Urologia';
