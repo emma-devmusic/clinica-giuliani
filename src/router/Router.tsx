@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import { AboutPage, ErrorPage, Home, ServicesPage, TeamPage, ProfilePage, ServicePage } from "../pages";
 import { ClinicaGiulianiApp } from "../ClinicaGiulianiApp";
+import { Login } from "../pages/Login";
 
 export const router = createBrowserRouter([
     {
@@ -38,4 +39,8 @@ export const router = createBrowserRouter([
         },
       ]
     },
+    {
+      path: '/login',
+      element: <Login />
+    }
 ]);
