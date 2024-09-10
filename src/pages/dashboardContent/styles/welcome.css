@@ -1,0 +1,27 @@
+@import '../../../assets/styles/main.css';
+
+.welcome-dashboard {
+    .welcome-dashboard__content {
+        height: 100%;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        gap: 2rem;
+        .dash-img {
+            align-self: self-end;
+        }
+        .welcome-message {
+            max-width: 300px;
+            align-self: self-start;
+            text-align: center;
+            font-weight: 200;
+            h5 {
+                color: rgb(85, 85, 85);
+                font-weight: 200;
+                strong {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

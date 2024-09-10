@@ -2,6 +2,9 @@ import { createBrowserRouter } from "react-router-dom";
 import { AboutPage, ErrorPage, Home, ServicesPage, TeamPage, ProfilePage, ServicePage } from "../pages";
 import { ClinicaGiulianiApp } from "../ClinicaGiulianiApp";
 import { Login } from "../pages/Login";
+import { Dashboard } from "../pages/Dashboard";
+import { Receipts } from "../pages/dashboardContent/Receipts";
+import { Welcome } from "../pages/dashboardContent/Welcome";
 
 export const router = createBrowserRouter([
     {
@@ -42,5 +45,19 @@ export const router = createBrowserRouter([
     {
       path: '/login',
       element: <Login />
-    }
+    },
+    {
+      path: '/dashboard',
+      element: <Dashboard />,
+      children: [
+        {
+          path: "",
+          element: <Welcome />
+        },
+        {
+          path: "/dashboard/receipts",
+          element: <Receipts />
+        }
+      ]
+    },
 ]);

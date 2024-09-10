@@ -1,10 +1,11 @@
 
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useForm } from '../../hooks/useForm'
 import { IconLogin } from './IconLogin'
 
 export const LoginForm = () => {
 
+    const navigate = useNavigate()
 
     const [values, handleInputChange, reset] = useForm({
         email: '',
@@ -13,6 +14,7 @@ export const LoginForm = () => {
 
     const handleSubmit = () => {
         console.log(values)
+        navigate('/dashboard')
     }
 
 

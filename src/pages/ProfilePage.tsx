@@ -5,11 +5,10 @@ import { dataServices } from "../components/services/data"
 import { Service } from "../components/services/Service"
 
 export const ProfilePage = () => {
+    
     const params = useParams()
     const doctor = dataDoctors[parseInt(params.idProfile || '')]
     const name = doctor.firstName + ' ' + doctor.lastName
-
-    console.log(doctor.docImage)
 
     return (
         <>

@@ -1,3 +1,11 @@
+:root {
+    /* --primary: #0463FA; */
+    --primary: #1A5899;
+    --light: #EFF5FF;
+    --dark: #1B2C51;
+}
+
+
 .whatsapp-btn {
     left: 40px;
 }
