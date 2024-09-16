@@ -7,9 +7,8 @@ import './assets/styles/main.css'
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <Providers>
       <RouterProvider router={router} />
     </Providers>
-  </React.StrictMode>,
 )

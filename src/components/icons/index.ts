@@ -1,2 +1,5 @@
 export * from './MenuHambur'
 export * from './ProfileIcon'
+export * from './Logout'
+export * from './ProfileSettings'
+export * from './EditIcon'

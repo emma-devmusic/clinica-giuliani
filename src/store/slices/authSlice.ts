@@ -20,9 +20,9 @@ const authSlice = createSlice({
     initialState,
     reducers: {
 
-        login(state, action: PayloadAction< {email: string; password: string;} >) {},
+        // login(state, action: PayloadAction< {username: string; password: string;} >) {},
 
-        setUser(state, action: PayloadAction<{ username: string }>) {
+        setUser(state, action: PayloadAction<{ username: string, user_id: number }>) {
             state.user = action.payload
             state.isAdmin = true;
             state.isAuthenticated = true;
@@ -39,7 +39,7 @@ const authSlice = createSlice({
 });
 
 export const {
-    login,
+    // login,
     setUser,
     clearAuth,
     logout

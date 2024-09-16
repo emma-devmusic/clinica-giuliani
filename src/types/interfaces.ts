@@ -22,3 +22,4 @@ export interface Doctor {
     days: string;
     description: string;
 }
+

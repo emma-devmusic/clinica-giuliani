@@ -11,7 +11,6 @@ interface Props {
 export const Providers = ({ children }: Props) => {
 
   useEffect(() => {
-
   }, [])
 
   return (

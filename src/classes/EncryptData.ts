@@ -3,7 +3,7 @@ import * as crypto from 'crypto-js';
 
 
 export default class EncryptData {
-    constructor(private key: string) {
+    constructor(private key: string = `${import.meta.env.VITE_SERVER_SECRET}`) {
         this.key = key;
         this.encrypt = this.encrypt.bind(this);
         this.decrypt = this.decrypt.bind(this);
