@@ -2,14 +2,14 @@ import logo from '../../../assets/img/logo.png'
 import { Link } from 'react-router-dom'
 import '../styles.css';
 import { RefObject } from 'react';
-import { MenuHambur, ProfileIcon } from '../../icons';
+import { MenuHambur } from '../../icons';
 import { ProfileMenu } from './ProfileMenu';
-
 export const NavbarDashboard = ({ refLayout }: { refLayout: RefObject<HTMLDivElement> }) => {
 
     const handleToggleSidebar = () => {
         refLayout.current?.classList.toggle('show-sidebar')
     }
+    
 
     return (
         <nav className="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn shadow-sm d-flex justify-content-between" data-wow-delay="0.1s">

@@ -1,19 +1,24 @@
 
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, redirect, useNavigate } from 'react-router-dom'
 import { useForm } from '../../hooks/useForm'
 import { IconLogin } from './IconLogin'
+import { useAppDispatch } from '../../store/store'
+import { login } from '../../store/slices/authSlice'
 
 export const LoginForm = () => {
 
     const navigate = useNavigate()
 
-    const [values, handleInputChange, reset] = useForm({
+    const dispatch = useAppDispatch()
+
+    const [values, handleInputChange] = useForm({
         email: '',
         password: ''
     })
 
-    const handleSubmit = () => {
-        console.log(values)
+    const handleSubmit = (e:any) => {
+        e.preventDefault()
+        dispatch( login(values) )
         navigate('/dashboard')
     }
 

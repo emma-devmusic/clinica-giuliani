@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 export const SidebarDashboard = () => {
+    
 
     return (
         <div className="sidebar-dashboard py-3">
@@ -11,6 +12,8 @@ export const SidebarDashboard = () => {
                 </div>
                 <ul className="list-group">
                     <Link to={"/dashboard/receipts"} className="">Recibos</Link>
+                    <Link to={"/dashboard/staff"} className="">Personal</Link>
+                    <Link to={"/dashboard/admin-users"} className="">Administrador de Usuarios</Link>
                 </ul>
             </div>
         </div>

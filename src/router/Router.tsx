@@ -1,10 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
-import { AboutPage, ErrorPage, Home, ServicesPage, TeamPage, ProfilePage, ServicePage } from "../pages";
+import { AboutPage, ErrorPage, Home, ServicesPage, TeamPage, ProfilePage, ServicePage, Dashboard, Login } from "../pages";
+import { AdminUsers, Receipts, UserProfile, Users, Welcome } from "../pages/dashboardContent";
 import { ClinicaGiulianiApp } from "../ClinicaGiulianiApp";
-import { Login } from "../pages/Login";
-import { Dashboard } from "../pages/Dashboard";
-import { Receipts } from "../pages/dashboardContent/Receipts";
-import { Welcome } from "../pages/dashboardContent/Welcome";
+
 
 export const router = createBrowserRouter([
     {
@@ -16,10 +14,6 @@ export const router = createBrowserRouter([
           path: "about",
           element: <AboutPage />,  
         },
-        // {
-        //   path: "contact",
-        //   element: <ContactPage />,  
-        // },
         {
           path: "services",
           element: <ServicesPage />,  
@@ -57,7 +51,19 @@ export const router = createBrowserRouter([
         {
           path: "/dashboard/receipts",
           element: <Receipts />
-        }
+        },
+        {
+          path: "/dashboard/staff",
+          element: <Users />
+        },
+        {
+          path: "/dashboard/admin-users",
+          element: <AdminUsers />
+        },
+        {
+          path: "/dashboard/profile",
+          element: <UserProfile />
+        },
       ]
     },
 ]);

@@ -1,5 +1,5 @@
-import dashImg from '../../assets/img/dash-img.png'
-import './styles/welcome.css'
+import dashImg from '../../../assets/img/dash-img.png'
+import '../styles/welcome.css'
 
 export const Welcome = () => {
 

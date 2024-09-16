@@ -6,3 +6,5 @@ export * from './ServicePage';
 export * from './TeamPage';
 export * from './ContactPage';
 export * from './ProfilePage';
+export * from './Dashboard';
+export * from './Login';

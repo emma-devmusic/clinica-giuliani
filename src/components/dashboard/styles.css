@@ -56,19 +56,19 @@ SIDEBAR
     transition: all .3s ease-in;
     height: calc(100vh - 75px);
     width: 100%;
-    max-width: 350px;
-    transform: translateX(-350px);
+    max-width: 320px;
+    transform: translateX(-320px);
     z-index: 2;
 
     .list-group {
         border-radius: 0;
-        /* border-bottom-right-radius: 14px; */
         a {
+            margin: .5rem;
             display: block;
-            padding: 10px 15px;
+            padding: 13px 15px;
             color: #333;
             text-decoration: none;
-            border-bottom: 1px solid rgb(236, 236, 236);
+            border-radius: 10px;
             transition: all .2s ease;
             &:hover {
                 transition: all .2s ease;
@@ -83,7 +83,7 @@ SIDEBAR
 }
 .show-sidebar {
     .content-dashboard {
-        margin-left: 350px;
+        margin-left: 320px;
         transition: all .3s ease-in;
     }
 
@@ -133,7 +133,7 @@ CONTENT
 }
 
 
-@media (max-width: 350px) {
+@media (max-width: 320px) {
     .sidebar-dashboard {
         max-width: 98vw;
     }
@@ -143,6 +143,12 @@ CONTENT
 
 
 
+/*
+=======================================================
+PROFILE MENU
+=======================================================
+*/
+
 
 
 #profile-menu {
@@ -151,7 +157,7 @@ CONTENT
     box-shadow: 0px 0px 5px 0px rgb(201, 201, 201);
     padding: .9rem 0;
     li {
-        margin: 0 1rem;
+        margin: 5px 1rem;
         a {
             border-radius: 5px !important;
             padding: .7rem .5rem ;
