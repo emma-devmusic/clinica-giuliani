@@ -1,0 +1,22 @@
+@import '../../assets/styles/main.css';
+
+.search-bar__input {
+    display: flex;
+    position: relative;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: var(--primary);
+    & button {
+        position: absolute;
+        right: 0;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+    }
+}
+
+.search-bar__filters {
+    .search-bar__filters-title{
+        font-size: .9rem;
+    }
+}

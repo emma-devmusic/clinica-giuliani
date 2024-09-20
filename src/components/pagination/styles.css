@@ -1,0 +1,13 @@
+@import '../../assets/styles/main.css';
+
+.pagination {
+    svg {
+        color: var(--primary);
+        transition: all.2s ease;
+        &:hover {
+            color: rgb(71, 130, 233);
+            transition: all.2s ease;
+            cursor: pointer;
+        }
+    }
+}

@@ -5,35 +5,61 @@ import { TableRow } from "../../../components/tables/TableRow";
 import { columnsUsers } from "./modules/columnsUsers";
 import { useAppDispatch, useAppSelector } from "../../../store/store";
 import { getUsers } from "../../../store/slices/usersSlice";
+import { Searchbar } from "../../../components/searchbar/Searchbar";
+import { Pagination } from "../../../components/pagination/Pagination";
+import { flu } from "../../../helpers/helpers";
+import { setModal } from "../../../store/slices/uiSlice";
+import { QueryObject } from "../../../types";
 import { Spinner } from "../../../components";
+
+
 
 export const AdminUsers = () => {
 
     const dispatch = useAppDispatch()
-    const { users } = useAppSelector(state => state.users)
-    const { isLoading } = useAppSelector(state => state.ui)
-    const [wasFetch, setWasFetch] = useState(false)
-
+    const [isLoading, setIsLoading] = useState(false)
+    const { users, pagination } = useAppSelector(state => state.users)
+    const [queryObject, setQueryObject] = useState<QueryObject>({
+        page: pagination.page,
+        term: ''
+    });
 
     useEffect(() => {
-        if(users.length === 0 && !wasFetch){
-            dispatch(getUsers(1))
-            setWasFetch(true)
-        }
-    },[wasFetch])
+        if (users.length === 0) dispatch(getUsers(queryObject))
+    }, [])
+
+    useEffect(() => {
+        if (users.length === 0) setIsLoading(true)
+        if (users.length !== 0) setIsLoading(false)
+    }, [users])
 
 
-    
-    if(isLoading) return <Spinner />
+    const handleModalOpen = () => {
+        dispatch(setModal({ content: 'new_user', title: 'Nuevo Usuario', type: 'success' }))
+    }
+
+
     return (
-        <ContentLayout title="Administrar Usuarios">
+        <ContentLayout title="Administrar Usuarios" >
+            <div className="d-flex flex-column-reverse gap-2 flex-md-row justify-content-md-between align-items-md-center">
+                <Searchbar queryObject={queryObject} setQueryObject={setQueryObject} />
+                <button className="btn btn-primary" onClick={handleModalOpen}>Nuevo Usuario</button>
+            </div>
+            {
+                isLoading
+                    ? <Spinner />
+                    : <TableLayout columns={columnsUsers()} style={{
+                        overflowX: 'hidden'
+                    }}>
+                        {
 
-            <TableLayout columns={columnsUsers()}>
-                <TableRow td={['hola', 'como', 'estan']} />
-                <TableRow td={['hola', 'como', 'estan']} />
-                <TableRow td={['hola', 'como', 'estan']} />
-            </TableLayout>
-            
+                            users.map((user, index) => (
+                                <TableRow key={index} td={[user.id, `${flu(user.name)} ${flu(user.lastname)}`, user.email]} />
+                            ))
+                        }
+                    </TableLayout>
+            }
+            <Pagination setQueryObject={setQueryObject} queryObject={queryObject} />
         </ContentLayout>
     );
 };

@@ -1,5 +1,6 @@
 
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+import { UserProfile } from '../../types/redux-states';
 
 
 export interface AuthState {
@@ -20,11 +21,11 @@ const authSlice = createSlice({
     initialState,
     reducers: {
 
-        // login(state, action: PayloadAction< {username: string; password: string;} >) {},
+        getUserProfile() {},
 
-        setUser(state, action: PayloadAction<{ username: string, user_id: number }>) {
+        setUser(state, action: PayloadAction<UserProfile>) {
             state.user = action.payload
-            state.isAdmin = true;
+            state.isAdmin = action.payload.role === 'admin'
             state.isAuthenticated = true;
         },
 
@@ -39,7 +40,7 @@ const authSlice = createSlice({
 });
 
 export const {
-    // login,
+    getUserProfile,
     setUser,
     clearAuth,
     logout

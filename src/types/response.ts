@@ -13,8 +13,11 @@ export interface SearchUserResponse {
 }
 
 export interface ItemSearchUserResponse {
+    dni:      string;
     email:    string;
     id:       number;
+    lastname: string;
+    name:     string;
+    phone:    string;
     role:     string;
-    username: string;
 }

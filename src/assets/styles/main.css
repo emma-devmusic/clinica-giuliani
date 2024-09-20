@@ -9,3 +9,14 @@
 .whatsapp-btn {
     left: 40px;
 }
+
+
+.onboarding-gray {
+    color: #41464b;
+    background-color: #e2e3e5;
+    border: none;
+    border-radius: 2px;
+    padding: 1rem;
+    border-left: 3px solid gray;
+    font-size: .8rem;
+}

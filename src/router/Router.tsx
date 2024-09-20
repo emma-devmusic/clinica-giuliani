@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import { AboutPage, ErrorPage, Home, ServicesPage, TeamPage, ProfilePage, ServicePage, Dashboard, Login } from "../pages";
 import { AdminUsers, Receipts, UserProfile, Users, Welcome } from "../pages/dashboardContent";
 import { ClinicaGiulianiApp } from "../ClinicaGiulianiApp";
+import { UserInfo } from "../pages/dashboardContent/adminUsers/userInfo/UserInfo";
 
 
 export const router = createBrowserRouter([
@@ -59,6 +60,10 @@ export const router = createBrowserRouter([
         {
           path: "/dashboard/admin-users",
           element: <AdminUsers />
+        },
+        {
+          path: "/dashboard/admin-users/:userId",
+          element: <UserInfo />
         },
         {
           path: "/dashboard/profile",

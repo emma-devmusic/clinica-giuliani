@@ -3,10 +3,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useForm } from '../../hooks/useForm'
 import { IconLogin } from './IconLogin'
 import { useAppDispatch } from '../../store/store'
-import { setUser } from '../../store/slices/authSlice'
+import { getUserProfile } from '../../store/slices/authSlice'
 import { setLoading } from '../../store/slices/uiSlice'
-import { AxiosResponse } from 'axios'
-import { LoginResponse } from '../../types/response'
 import { fetchData } from '../../services/fetchdata'
 import Swal from 'sweetalert2'
 
@@ -16,21 +14,20 @@ export const LoginForm = () => {
     const dispatch = useAppDispatch()
 
     const [values, handleInputChange] = useForm({
-        username: '',
-        password: ''
+        email: 'fayser.dev@gmail.com',
+        password: '1234'
     })
 
     const handleSubmit = async (e: any) => {
         e.preventDefault()
         try {
             dispatch(setLoading(true));
-            const loginResp: AxiosResponse<LoginResponse> = await fetchData('POST', 'login', values)
-            dispatch(setUser({ username: values.username, user_id: loginResp.data.user_id }))
+            await fetchData('POST', 'login', values)
+            dispatch(getUserProfile())
             navigate('/dashboard')
         } catch (error:any) {
             Swal.fire('Error', `${error.response.data.error}`, 'error')
         }
-        dispatch(setLoading(false));
     }
 
 
@@ -49,11 +46,11 @@ export const LoginForm = () => {
                     <h1 className="h4 mb-3 text-center fw-light">Recibos de <strong>Sueldos</strong></h1>
 
                     <div className="form-floating">
-                        <input value={values.username} onChange={handleInputChange} name='username' type="text" className="form-control" id="floatingInput" placeholder="Usuario123" required />
-                        <label htmlFor="username">Correo Electrónico</label>
+                        <input value={values.email} onChange={handleInputChange} name='email' type="text" className="form-control" id="email" placeholder="Usuario123" required />
+                        <label htmlFor="email">Correo Electrónico</label>
                     </div>
                     <div className="form-floating">
-                        <input value={values.password} onChange={handleInputChange} name='password' type="password" className="form-control" id="floatingPassword" placeholder="Password" required />
+                        <input value={values.password} onChange={handleInputChange} name='password' type="password" className="form-control" id="password" placeholder="Password" required />
                         <label htmlFor="password">Contraseña</label>
                     </div>
 

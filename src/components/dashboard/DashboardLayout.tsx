@@ -5,6 +5,7 @@ import { FooterDashboard } from "./footer/FooterDashboard";
 import { useAppSelector } from "../../store/store";
 import { Spinner } from "../spinner/Spinner";
 import './styles.css';
+import { Modal } from "../modal/Modal";
 
 export const DashboardLayout = ({ children }: { children: ReactNode }) => {
 
@@ -23,6 +24,7 @@ export const DashboardLayout = ({ children }: { children: ReactNode }) => {
                     <FooterDashboard />
                 </div>
             </div>
+            <Modal />
         </div>
     );
 };
