@@ -37,6 +37,10 @@ const usersSlice = createSlice({
             state.users = action.payload
         },
 
+        setUserActive(state, action: PayloadAction<UserProfile>){
+            state.userActive = {...action.payload }
+        },
+
         newUser(state, action:PayloadAction<NewUserInputsForm>){},
 
         setPagination(state, action: PayloadAction<UserPagination>){
@@ -66,6 +70,7 @@ export const {
     toogleSelectAll,
     getUsers,
     setUsers,
+    setUserActive,
     newUser
 } = usersSlice.actions;
 

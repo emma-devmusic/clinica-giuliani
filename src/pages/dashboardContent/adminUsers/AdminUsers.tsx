@@ -19,6 +19,7 @@ export const AdminUsers = () => {
     const dispatch = useAppDispatch()
     const [isLoading, setIsLoading] = useState(false)
     const { users, pagination } = useAppSelector(state => state.users)
+    
     const [queryObject, setQueryObject] = useState<QueryObject>({
         page: pagination.page,
         term: ''
@@ -52,9 +53,8 @@ export const AdminUsers = () => {
                         overflowX: 'hidden'
                     }}>
                         {
-
                             users.map((user, index) => (
-                                <TableRow key={index} td={[user.id, `${flu(user.name)} ${flu(user.lastname)}`, user.email]} />
+                                <TableRow key={index} td={user} />
                             ))
                         }
                     </TableLayout>

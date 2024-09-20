@@ -3,31 +3,35 @@
 import { ChangeEvent, useEffect, useState } from "react";
 import { TableActions } from "./TableActions";
 import { useAppDispatch, useAppSelector } from "../../store/store";
-import { toogleSelectUser } from "../../store/slices/usersSlice";
+import { setUserActive, toogleSelectUser } from "../../store/slices/usersSlice";
+import { useNavigate } from "react-router-dom";
+import { UserProfile } from "../../types";
+import { flu } from "../../helpers/helpers";
 
 interface Props {
-    td: any;
+    td: UserProfile;
 }
 
 
 export const TableRow = ({ td }: Props) => {
 
-    const editUser = (id: number) => {
-        console.log('Editando usuario', id);
-    }
-
+    const navigate = useNavigate()
     const dispatch = useAppDispatch()
     const { usersSelected } = useAppSelector(state => state.users)
     const [checked, setChecked] = useState(false);
-
-
+    
+    
+    const editUser = (id: number) => {
+        dispatch(setUserActive(td))
+        navigate('/dashboard/admin-users/' + id)
+    }
     useEffect(() => {
-        setChecked(usersSelected.includes(td[0]))
+        setChecked(usersSelected.includes(td.id))
     }, [usersSelected])
 
     const handleCheckUser = (e: ChangeEvent<HTMLInputElement>) => {
         setChecked(!e.target.checked)
-        dispatch(toogleSelectUser({id: td[0]}))
+        dispatch(toogleSelectUser({id: td.id}))
     }
 
 
@@ -44,10 +48,10 @@ export const TableRow = ({ td }: Props) => {
                     />
                 </div>
             </td>
-            <td>{td[0]}</td>
-            <td>{td[1]}</td>
-            <td>{td[2]}</td>
-            <td><TableActions handleEdit={editUser} /></td>
+            <td>{td.id}</td>
+            <td>{`${flu(td.name)} ${flu(td.lastname)}`}</td>
+            <td>{td.email}</td>
+            <td><TableActions handleEdit={() => editUser(td.id)} /></td>
         </tr>
     );
 };
