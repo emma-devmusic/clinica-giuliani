@@ -2,20 +2,24 @@ import { Middleware, configureStore } from '@reduxjs/toolkit';
 import { useDispatch, TypedUseSelectorHook, useSelector } from 'react-redux';
 import { authMiddleware } from './middleware/auth-middleware';
 import { usersMiddleware } from './middleware/users-middleware';
+import { assetsMiddleware } from './middleware/assets-middleware';
 import authReducer from './slices/authSlice'
 import uiReducer from './slices/uiSlice';
 import usersReducer from './slices/usersSlice';
+import assetsReducer from './slices/assetsSlice';
 
 const middlewares = [
     authMiddleware,
-    usersMiddleware
+    usersMiddleware,
+    assetsMiddleware
 ] as Middleware[]
 
 export const store = configureStore({
   reducer: {
     auth: authReducer,
     ui: uiReducer,
-    users: usersReducer
+    users: usersReducer,
+    assets: assetsReducer
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware({
     serializableCheck: false,

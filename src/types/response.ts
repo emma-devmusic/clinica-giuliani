@@ -21,3 +21,21 @@ export interface ItemSearchUserResponse {
     phone:    string;
     role:     string;
 }
+
+
+export interface GetAssetsResponose {
+    items:       ItemGetAssetsResponose[];
+    limit:       number;
+    page:        number;
+    total_items: number;
+    total_pages: number;
+}
+
+export interface ItemGetAssetsResponose {
+    created_at:   string;
+    document_url: string;
+    id:           number;
+    updated_at:   string;
+    user_id:      number;
+}
+

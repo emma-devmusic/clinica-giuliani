@@ -33,6 +33,8 @@ const usersSlice = createSlice({
     reducers: {
         getUsers(state, action: PayloadAction<QueryObject>) { },
 
+        getUserById(state, action:PayloadAction<string>) { },
+
         setUsers(state, action: PayloadAction<ItemSearchUserResponse[]>) {
             state.users = action.payload
         },
@@ -65,12 +67,13 @@ const usersSlice = createSlice({
 });
 
 export const {
+    getUsers,
+    getUserById,
+    setUsers,
+    setUserActive,
     setPagination,
     toogleSelectUser,
     toogleSelectAll,
-    getUsers,
-    setUsers,
-    setUserActive,
     newUser
 } = usersSlice.actions;
 

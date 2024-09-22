@@ -1,25 +1,27 @@
 import { Dispatch, SetStateAction, useState } from "react";
 import { SearchIcon } from "../icons";
 import { QueryObject } from "../../types";
-import './styles.css'
 import { useAppDispatch } from "../../store/store";
-import { getUsers } from "../../store/slices/usersSlice";
+import './styles.css'
 
 interface Props {
     setQueryObject: Dispatch<SetStateAction<QueryObject>>
-    queryObject: QueryObject
+    queryObject: QueryObject,
+    action: any
 }
 
 
 
-export const Searchbar = ({ queryObject, setQueryObject }: Props) => {
+export const Searchbar = ({ queryObject, setQueryObject, action }: Props) => {
 
     const dispatch = useAppDispatch()
     const [ values, setValues ] = useState({term: ''})
 
     const handleSearch = (e:any) => {
         e.preventDefault()
-        dispatch(getUsers({page: queryObject.page, term: values.term}))
+        dispatch(action({page: queryObject.page, term: values.term}))
+        // dispatch(getUsers({page: queryObject.page, term: values.term}))
+        // console.log({page: queryObject.page, term: values.term})
     }
 
     return (

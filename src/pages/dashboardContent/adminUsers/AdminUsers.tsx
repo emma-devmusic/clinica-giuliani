@@ -2,12 +2,11 @@ import { useEffect, useState } from "react";
 import { ContentLayout } from "../../../components/dashboard/contents/ContentLayout";
 import { TableLayout } from "../../../components/tables/TableLayout";
 import { TableRow } from "../../../components/tables/TableRow";
-import { columnsUsers } from "./modules/columnsUsers";
+import { columnsUsers } from "./modules/columns";
 import { useAppDispatch, useAppSelector } from "../../../store/store";
 import { getUsers } from "../../../store/slices/usersSlice";
 import { Searchbar } from "../../../components/searchbar/Searchbar";
 import { Pagination } from "../../../components/pagination/Pagination";
-import { flu } from "../../../helpers/helpers";
 import { setModal } from "../../../store/slices/uiSlice";
 import { QueryObject } from "../../../types";
 import { Spinner } from "../../../components";
@@ -29,10 +28,10 @@ export const AdminUsers = () => {
         if (users.length === 0) dispatch(getUsers(queryObject))
     }, [])
 
-    useEffect(() => {
-        if (users.length === 0) setIsLoading(true)
-        if (users.length !== 0) setIsLoading(false)
-    }, [users])
+    // useEffect(() => {
+    //     if (users.length === 0) setIsLoading(true)
+    //     if (users.length !== 0) setIsLoading(false)
+    // }, [users])
 
 
     const handleModalOpen = () => {
@@ -43,7 +42,7 @@ export const AdminUsers = () => {
     return (
         <ContentLayout title="Administrar Usuarios" >
             <div className="d-flex flex-column-reverse gap-2 flex-md-row justify-content-md-between align-items-md-center">
-                <Searchbar queryObject={queryObject} setQueryObject={setQueryObject} />
+                <Searchbar queryObject={queryObject} setQueryObject={setQueryObject} action={getUsers}/>
                 <button className="btn btn-primary" onClick={handleModalOpen}>Nuevo Usuario</button>
             </div>
             {
@@ -59,7 +58,7 @@ export const AdminUsers = () => {
                         }
                     </TableLayout>
             }
-            <Pagination setQueryObject={setQueryObject} queryObject={queryObject} />
+            <Pagination setQueryObject={setQueryObject} queryObject={queryObject} action={getUsers}/>
         </ContentLayout>
     );
 };

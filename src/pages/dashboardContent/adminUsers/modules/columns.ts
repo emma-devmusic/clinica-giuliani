@@ -6,3 +6,10 @@ export const columnsUsers = () => {
         'Acciones'
     ]
 }
+
+
+export const columnsAssets = [
+    'Recibos',
+    'Período',
+    'Acciones'
+]

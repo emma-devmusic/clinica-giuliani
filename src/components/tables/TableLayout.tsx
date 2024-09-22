@@ -36,7 +36,7 @@ export const TableLayout = (props: TableProps) => {
             <table className="table-cms table mt-4 mb-4" {...props}>
                 <thead>
                     <tr>
-                        <th scope="col">
+                        <th>
                             <div className="form-check">
                                 <input
                                     className="form-check-input"

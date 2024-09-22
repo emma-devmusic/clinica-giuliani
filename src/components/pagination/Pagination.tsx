@@ -1,23 +1,23 @@
 import { Dispatch, SetStateAction } from "react";
 import { useAppDispatch, useAppSelector } from "../../store/store";
 import { ArrowIcon } from "../icons";
-import './styles.css'
 import { QueryObject } from "../../types";
-import { getUsers } from "../../store/slices/usersSlice";
+import './styles.css'
 
 interface Props {
-    setQueryObject: Dispatch<SetStateAction<QueryObject>>
-    queryObject: QueryObject
+    setQueryObject: Dispatch<SetStateAction<QueryObject>>;
+    queryObject: QueryObject;
+    action: any;
 }
 
-export const Pagination = ({setQueryObject, queryObject}: Props) => {
+export const Pagination = ({setQueryObject, queryObject, action}: Props) => {
 
     const dispatch = useAppDispatch()
     const { pagination } = useAppSelector(state => state.users)
 
     const handlePageChange = (page: number) => {
         if(page > pagination.total_pages || page === 0) return
-        dispatch(getUsers({term: queryObject.term, page: page}))
+        dispatch(action({term: queryObject.term, page: page}))
     };
 
     return (
