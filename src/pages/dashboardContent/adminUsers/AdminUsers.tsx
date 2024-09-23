@@ -58,7 +58,7 @@ export const AdminUsers = () => {
                         }
                     </TableLayout>
             }
-            <Pagination setQueryObject={setQueryObject} queryObject={queryObject} action={getUsers}/>
+            <Pagination setQueryObject={setQueryObject} queryObject={queryObject} action={getUsers} pagination={pagination}/>
         </ContentLayout>
     );
 };

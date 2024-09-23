@@ -14,17 +14,23 @@ export const UserInfo = () => {
 
     useEffect(() => {
         if (userActive.id === 0) {
-            dispatch( getUserById(params.userId ?? '') )
+            dispatch(getUserById(params.userId ?? ''))
         }
     }, [])
 
     return (
         <ContentLayout title="Información De Usuario">
-            <div className="row">
+            <div className="row gap-3 gap-lg-0">
                 <div className="col-lg-8">
-                    <h6 className="mt-2 mb-2">Haberes</h6>
-                    <hr className="mb-4" />
-                    <AssetsTable />
+                    <div className="card">
+                        <div className="card-header">
+                            <h6 className="mt-2 mb-2">Haberes</h6>
+                        </div>
+                        {/* <hr className="mb-4" /> */}
+                        <div className="card-body">
+                            <AssetsTable />
+                        </div>
+                    </div>
                 </div>
                 <div className="col-lg-4">
                     <UserCard />

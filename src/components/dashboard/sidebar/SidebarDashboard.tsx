@@ -11,7 +11,7 @@ export const SidebarDashboard = () => {
                 </div>
                 <ul className="list-group">
                     <Link to={"/dashboard/receipts"} className="">Recibos</Link>
-                    <Link to={"/dashboard/staff"} className="">Personal</Link>
+                    {/* <Link to={"/dashboard/staff"} className="">Personal</Link> */}
                     <Link to={"/dashboard/admin-users"} className="">Administrador de Usuarios</Link>
                 </ul>
 

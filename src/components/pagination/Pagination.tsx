@@ -8,12 +8,12 @@ interface Props {
     setQueryObject: Dispatch<SetStateAction<QueryObject>>;
     queryObject: QueryObject;
     action: any;
+    pagination: any
 }
 
-export const Pagination = ({setQueryObject, queryObject, action}: Props) => {
+export const Pagination = ({setQueryObject, queryObject, action, pagination}: Props) => {
 
     const dispatch = useAppDispatch()
-    const { pagination } = useAppSelector(state => state.users)
 
     const handlePageChange = (page: number) => {
         if(page > pagination.total_pages || page === 0) return

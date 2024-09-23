@@ -110,9 +110,14 @@ SIDEBAR
 CONTENT
 =======================================================
 */
+.content-container {
+    overflow-y: auto;
+}
+
 
 .content-layout {
-    padding: 0 2rem
+    padding: 0 2rem;
+    overflow: auto
 }
 
 .content-dashboard {

@@ -47,7 +47,7 @@ export const AssetsTable = () => {
                          
                     </TableLayout>
             }
-            <Pagination setQueryObject={setQueryObject} queryObject={queryObject} action={console.log}/>
+            <Pagination setQueryObject={setQueryObject} queryObject={queryObject} action={console.log} pagination={pagination}/>
         </div>
     )
 }

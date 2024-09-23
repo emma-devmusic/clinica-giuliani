@@ -4,14 +4,22 @@ import { UserProfile } from '../../types/redux-states';
 
 
 export interface AuthState {
-    user: any;
+    user: UserProfile;
     isAdmin: boolean;
     isAuthenticated: boolean;
 }
 
 
 const initialState:AuthState = {
-    user: {},
+    user: {
+        dni: '',
+        email: '',
+        id: 0,
+        lastname: '',
+        name: '',
+        phone: '',
+        role: ''
+    } as UserProfile,
     isAdmin: false,
     isAuthenticated: false,
 }
@@ -32,7 +40,7 @@ const authSlice = createSlice({
         clearAuth(state) {
             state.isAdmin = false;
             state.isAuthenticated = false;
-            state.user = {};
+            state.user = initialState.user;
         },
 
         logout() {}

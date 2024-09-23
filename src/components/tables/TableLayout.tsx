@@ -25,6 +25,9 @@ export const TableLayout = (props: TableProps) => {
             : setAllCheck(true);
     }, [usersSelected])
 
+    useEffect(() => {
+        setAllCheck(false)
+    },[])
 
     const handleCheckAll = (event: ChangeEvent<HTMLInputElement>) => {
         setAllCheck(event.target.checked);

@@ -1,4 +1,5 @@
 
+import { EditIcon } from '../../../../components/icons'
 import { useAppSelector } from '../../../../store/store'
 
 
@@ -10,7 +11,12 @@ export const UserCard = () => {
     return (
         <div className="card">
             <div className="card-header">
-                <div className="card-title"><h6 className="mt-2">Datos del usuario</h6></div>
+                <div className="card-title d-flex align-items-center justify-content-between m-0">
+                    <h6 className="mt-2">Datos</h6> 
+                    <div>
+                        <EditIcon className='fs-5'/>
+                    </div>
+                </div>
             </div>
             <div className="card-body">
                 <div className="flex">
