@@ -1,14 +1,33 @@
+import { useEffect, useState } from "react";
 import { PhoneIcon, ProfileIcon, EmailIcon, DocumentIcon, AdminIcon, EmployeeIcon } from "../../../components/icons";
 import { flu } from "../../../helpers/helpers";
-import { useAppSelector } from "../../../store/store";
+import { useAppDispatch, useAppSelector } from "../../../store/store";
 import './styles.css'
+import Session from "../../../classes/Session";
+import { setUser } from "../../../store/slices/authSlice";
+import { Spinner } from "../../../components";
+import { useNavigate } from "react-router-dom";
 
 
 export const UserProfile = () => {
 
 
     const { user } = useAppSelector(state => state.auth)
+    const dispatch = useAppDispatch()
+    const navigate = useNavigate()
+    const [isLoading, setIsLoading] = useState(true)
 
+    useEffect(() => {
+        const userSession = new Session().getUserSession()
+        if(userSession) {
+            dispatch( setUser(userSession) )
+            setIsLoading(false)
+        } else {
+            navigate('/login')
+        }
+    },[])
+
+    if(isLoading) return <Spinner />
     return (
         <div className="">
             <div className="p-2 mb-3" style={{maxWidth: '600px', margin: '0 auto'}}>
