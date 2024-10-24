@@ -21,7 +21,7 @@ export const Appointment = () => {
                                     </div>
                                     <div className="ms-4">
                                         <p className="mb-2">Para agendar un turno</p>
-                                        <h5 className="mb-0">+54 9 3731 64-4123</h5>
+                                        <h5 className="mb-0">+54 9 3731 44-3485</h5>
                                     </div>
                                 </div>
                             </div>
@@ -45,7 +45,6 @@ export const Appointment = () => {
                                     allowFullScreen 
                                     tabIndex={0} 
                                     aria-hidden="false"></iframe>
-                                    
                             </div>
                         </div>
                     </div>

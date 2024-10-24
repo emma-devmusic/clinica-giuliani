@@ -1,6 +1,7 @@
 export interface LoginResponse {
     message: string;
     user_id: number;
+    role: 'admin' | 'employee';
 }
 
 
@@ -22,7 +23,6 @@ export interface ItemSearchUserResponse {
     role:     string;
 }
 
-
 export interface GetAssetsResponose {
     items:       ItemGetAssetsResponose[];
     limit:       number;
@@ -37,5 +37,7 @@ export interface ItemGetAssetsResponose {
     id:           number;
     updated_at:   string;
     user_id:      number;
+    asset_type: string;
+    period: Date | string;
 }
 

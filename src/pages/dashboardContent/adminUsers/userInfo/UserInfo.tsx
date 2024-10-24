@@ -22,7 +22,7 @@ export const UserInfo = () => {
         <ContentLayout title="Información De Usuario">
             <div className="row gap-3 gap-lg-0">
                 <div className="col-lg-8">
-                    <div className="card">
+                    <div className="card" >
                         <div className="card-header">
                             <h6 className="mt-2 mb-2">Haberes</h6>
                         </div>

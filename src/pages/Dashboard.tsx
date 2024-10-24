@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import { DashboardLayout } from "../components/dashboard/DashboardLayout";
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../store/store";
@@ -7,20 +7,21 @@ import { setUser } from "../store/slices/authSlice";
 
 export const Dashboard = () => {
 
-    const { user } = useAppSelector(state=>state.auth)
-    const { isLoading } = useAppSelector(state=>state.ui)
+    const { user } = useAppSelector(state => state.auth)
     const dispatch = useAppDispatch()
+    const navigate = useNavigate()
+
 
     useEffect(() => {
-        if(!isLoading){
-            if(user.id === undefined) {
-              const userInSession = new Session().getUserSession()
-              if(typeof userInSession !== 'undefined') {
-                dispatch( setUser( userInSession ) )
-              }
+        if (user.name === '') {
+            const userSession = new Session().getUserSession()
+            if (userSession && userSession?.name !== '') {
+                dispatch(setUser(userSession))
+            } else {
+                navigate('/login')
             }
         }
-      }, [])
+    }, [user])
 
 
     return (
@@ -30,7 +31,7 @@ export const Dashboard = () => {
                     <Outlet />
                 </div>
             </DashboardLayout>
-            
+
         </>
     );
 };

@@ -6,13 +6,11 @@ import { MenuHambur } from '../../icons';
 import { ProfileMenu } from './ProfileMenu';
 export const NavbarDashboard = ({ refLayout }: { refLayout: RefObject<HTMLDivElement> }) => {
 
-    const handleToggleSidebar = () => {
-        refLayout.current?.classList.toggle('show-sidebar')
-    }
+    const handleToggleSidebar = () => refLayout.current?.classList.toggle('show-sidebar')
     
 
     return (
-        <nav className="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn shadow-sm d-flex justify-content-between" data-wow-delay="0.1s">
+        <nav className="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 shadow-sm d-flex justify-content-between">
             <div className='d-flex align-itmes-center '>
                 <button
                     onClick={handleToggleSidebar}
@@ -25,7 +23,7 @@ export const NavbarDashboard = ({ refLayout }: { refLayout: RefObject<HTMLDivEle
                     {/* <h1 className="m-0 text-primary font-muller-heavy"><span>Clínica</span> <strong>G</strong>iuliani</h1> */}
                 </Link>
             </div>
-            <div className='position-relative'>
+            <div className='position-relative d-none d-sm-flex'>
                 <ProfileMenu />
             </div>
         </nav>

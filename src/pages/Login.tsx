@@ -6,9 +6,9 @@ export const Login = () => {
 
     
     return (
-        <>
+        <div className="login-background">
             <NavbarLogin />
             <LoginForm />
-        </>
+        </div>
     )
 }

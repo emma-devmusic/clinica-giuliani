@@ -1,5 +1,6 @@
 
 import { useAppSelector } from "../../store/store";
+import { NewAsset } from "./contentModal/newAsset/NewAsset";
 import { NewUserModal } from "./contentModal/newUser/NewUserModal";
 
 export const Modal = () => {
@@ -18,6 +19,12 @@ export const Modal = () => {
                         </div>
                         {
                             content === 'new_user' && <NewUserModal />
+                        }
+                        {
+                            content === 'update_user' && <NewUserModal />
+                        }
+                        {
+                            content === 'new_asset' && <NewAsset />
                         }
                     </div>
                 </div>

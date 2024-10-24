@@ -16,3 +16,7 @@
 .table-cms th {
     color: var(--primary)
 }
+
+.table-cms tr:hover {
+    background-color: #f8f8f8;
+}

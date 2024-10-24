@@ -1,4 +1,4 @@
-import { ItemSearchUserResponse } from "./response"
+import { GetAssetsResponose, ItemSearchUserResponse } from "./response"
 
 
 export interface UsersState {
@@ -24,5 +24,11 @@ export interface UserProfile {
     name:     string;
     phone:    string;
     role:     string;
+}
+
+
+export interface AssetState {
+    assets: GetAssetsResponose;
+    assetsSelected: number[];
 }
 

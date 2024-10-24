@@ -9,7 +9,8 @@ export const columnsUsers = () => {
 
 
 export const columnsAssets = [
-    'Recibos',
     'Período',
+    'Tipo',
+    'Fecha de Carga',
     'Acciones'
 ]

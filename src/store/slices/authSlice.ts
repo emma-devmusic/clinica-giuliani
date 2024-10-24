@@ -29,12 +29,15 @@ const authSlice = createSlice({
     initialState,
     reducers: {
 
-        getUserProfile() {},
+        getUserProfile(state, action: PayloadAction<'admin' | 'employee'>) {
+            console.log(state, action)
+        },
 
         setUser(state, action: PayloadAction<UserProfile>) {
             state.user = action.payload
             state.isAdmin = action.payload.role === 'admin'
             state.isAuthenticated = true;
+            // location.replace('/dashboard')
         },
 
         clearAuth(state) {

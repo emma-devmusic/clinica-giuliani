@@ -31,9 +31,13 @@ const usersSlice = createSlice({
     name: 'users',
     initialState,
     reducers: {
-        getUsers(state, action: PayloadAction<QueryObject>) { },
+        getUsers(state, action: PayloadAction<QueryObject>) { 
+            console.log(state, action)
+         },
 
-        getUserById(state, action:PayloadAction<string>) { },
+        getUserById(state, action:PayloadAction<string>) { 
+            console.log(state, action)
+         },
 
         setUsers(state, action: PayloadAction<ItemSearchUserResponse[]>) {
             state.users = action.payload
@@ -43,10 +47,36 @@ const usersSlice = createSlice({
             state.userActive = {...action.payload }
         },
 
-        newUser(state, action:PayloadAction<NewUserInputsForm>){},
+        newUser(state, action:PayloadAction<NewUserInputsForm>){
+            console.log(state, action)
+        },
+
+        deleteUser(state, action: PayloadAction<number>) {
+            console.log(state, action)
+        },
 
         setPagination(state, action: PayloadAction<UserPagination>){
             state.pagination = { ...action.payload }
+        },
+
+        updateUser(state, action: PayloadAction<{id: number, data:NewUserInputsForm}>) {
+            console.log(state, action)
+        },
+
+        cleanUserActive(state){
+            state.userActive = {
+                email: '',
+                id: 0,
+                role: '',
+                dni: '',
+                lastname: '',
+                name: '',
+                phone: '',
+            }
+        },
+
+        cleanSelectedUsers(state) {
+            state.usersSelected = []
         },
 
         toogleSelectUser(state, action: PayloadAction<{ id: number }>) {
@@ -58,7 +88,7 @@ const usersSlice = createSlice({
             }
         },
 
-        toogleSelectAll(state, action: PayloadAction<boolean>) {
+        toogleSelectAllUsers(state, action: PayloadAction<boolean>) {
             state.usersSelected = action.payload
                 ? state.users.map(user => user.id)
                 : []
@@ -70,11 +100,15 @@ export const {
     getUsers,
     getUserById,
     setUsers,
+    newUser,
+    deleteUser,
     setUserActive,
     setPagination,
+    updateUser,
+    cleanUserActive,
+    cleanSelectedUsers,
     toogleSelectUser,
-    toogleSelectAll,
-    newUser
+    toogleSelectAllUsers
 } = usersSlice.actions;
 
 export default usersSlice.reducer;

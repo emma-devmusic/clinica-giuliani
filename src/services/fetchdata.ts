@@ -13,7 +13,7 @@ export const fetchData = async (method: string, url: string, data: object | null
     const response = await axiosInstance({
         method,
         url: url,
-        ...(data && { data })
+        ...(data && { data }),
     })
 
     return response

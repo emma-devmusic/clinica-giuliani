@@ -17,7 +17,7 @@ export default class DecryptedSession {
         return 'Permissions'
     }
     getModuleById(id: number) {
-        return 'Modules by Id'
+        return 'Modules by Id ' + id
     }
     getData() {
         return 'Data User'

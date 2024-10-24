@@ -1,33 +1,35 @@
 import { ChangeEvent, ReactNode, useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../store/store";
-import { toogleSelectAll } from "../../store/slices/usersSlice";
 import './styles.css'
 
 
 
 
-interface TableProps extends React.HTMLAttributes<HTMLTableElement> {
+interface TableProps {
     columns: string[];
     children: ReactNode[] | ReactNode;
+    items: any;
+    itemsSelected: any;
+    toogleSelectAll: any;
 }
 
 
 
-export const TableLayout = (props: TableProps) => {
+export const TableLayout = ({ columns, children, items, itemsSelected, toogleSelectAll }: TableProps) => {
 
     const dispatch = useAppDispatch()
-    const { users, usersSelected } = useAppSelector(state => state.users)
+    const { isAdmin } = useAppSelector(state => state.auth)
     const [allCheck, setAllCheck] = useState(false);
 
     useEffect(() => {
-        (usersSelected.length < users.length)
+        (itemsSelected.length < items.length)
             ? setAllCheck(false)
             : setAllCheck(true);
-    }, [usersSelected])
+    }, [itemsSelected])
 
     useEffect(() => {
         setAllCheck(false)
-    },[])
+    }, [])
 
     const handleCheckAll = (event: ChangeEvent<HTMLInputElement>) => {
         setAllCheck(event.target.checked);
@@ -35,30 +37,33 @@ export const TableLayout = (props: TableProps) => {
     }
 
     return (
-        <div style={{overflowX: 'auto'}}>
-            <table className="table-cms table mt-4 mb-4" {...props}>
+        <div style={{ overflow: 'auto' }}>
+            <table className="table-cms table mt-4 mb-4" style={{ minWidth: '600px' }}>
                 <thead>
                     <tr>
-                        <th>
-                            <div className="form-check">
-                                <input
-                                    className="form-check-input"
-                                    type="checkbox"
-                                    checked={allCheck}
-                                    id="flexCheckDefault"
-                                    onChange={handleCheckAll}
-                                />
-                            </div>
-                        </th>
                         {
-                            props.columns.map((column, index) => (
+                            isAdmin &&
+                            <th>
+                                <div className="form-check">
+                                    <input
+                                        className="form-check-input"
+                                        type="checkbox"
+                                        checked={allCheck}
+                                        id="flexCheckDefault"
+                                        onChange={handleCheckAll}
+                                    />
+                                </div>
+                            </th>
+                        }
+                        {
+                            columns.map((column, index) => (
                                 <th scope="col" key={index}>{column}</th>
                             ))
                         }
                     </tr>
                 </thead>
                 <tbody>
-                    {props.children}
+                    {children}
                 </tbody>
             </table>
         </div>

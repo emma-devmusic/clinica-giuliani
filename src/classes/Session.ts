@@ -1,5 +1,5 @@
-import Swal from "sweetalert2";
-import { UserProfile, UsersState } from "../types";
+
+import { UserProfile } from "../types";
 import EncryptData from "./EncryptData";
 
 export default class Session {
@@ -8,7 +8,7 @@ export default class Session {
         this.getUserSession = this.getUserSession.bind(this);
         this.getModuleById = this.getModuleById.bind(this);
         this.getData = this.getData.bind(this);
-        this.getRoleId = this.getRoleId.bind(this);
+        this.getRole = this.getRole.bind(this);
         this.getPermissionsId = this.getPermissionsId.bind(this);
     }
 
@@ -17,25 +17,19 @@ export default class Session {
         sessionStorage.setItem('session-user-clinica', encryptedData)
     }
 
-    getUserSession() {
+    getUserSession(): UserProfile | false{
         const userEncrypt = sessionStorage.getItem('session-user-clinica')
-        if(userEncrypt){
-            return new EncryptData().decrypt(userEncrypt).data as UserProfile
-        } else {
-            Swal.fire('Error', 'No existe session guardada', 'error')
-            setTimeout(() => {
-                location.replace('/login')
-            }, 3000);
-        }
+        return userEncrypt ? new EncryptData().decrypt(userEncrypt).data as UserProfile : false
     }
     getModuleById(id: number) {
-        return 'Modules by Id'
+        return 'Modules by Id ' + id
     }
     getData() {
         return 'Data User'
     }
-    getRoleId() {
-        return 'Role'
+    getRole() {
+        const session = this.getUserSession()
+        return session ? session.role : 'No hay session'
     }
     getPermissionsId() {
         return 'Permission Id'

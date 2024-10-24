@@ -63,6 +63,9 @@ SIDEBAR
     .list-group {
         border-radius: 0;
 
+        .on-sidebar svg:hover{
+            color: white !important;
+        }
         a {
             margin: .5rem;
             display: block;

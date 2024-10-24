@@ -23,3 +23,4 @@ export interface Doctor {
     description: string;
 }
 
+export type HaberesTypes = 'Adicional Sanidad' | 'Complementaria' | 'Sueldo' | 'Aguinaldo'

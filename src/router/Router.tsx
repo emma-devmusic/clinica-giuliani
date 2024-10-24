@@ -1,8 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import { AboutPage, ErrorPage, Home, ServicesPage, TeamPage, ProfilePage, ServicePage, Dashboard, Login } from "../pages";
-import { AdminUsers, Receipts, UserProfile, Users, Welcome } from "../pages/dashboardContent";
+import { AdminUsers, Assets, UserProfile, Users, Welcome } from "../pages/dashboardContent";
 import { ClinicaGiulianiApp } from "../ClinicaGiulianiApp";
 import { UserInfo } from "../pages/dashboardContent/adminUsers/userInfo/UserInfo";
+import { SelectingUser } from "../pages/dashboardContent/assets/modules/SelectingUser";
+import { AssetsPage } from "../pages/dashboardContent/assets/modules/AssetsPage";
 
 
 export const router = createBrowserRouter([
@@ -50,8 +52,18 @@ export const router = createBrowserRouter([
           element: <Welcome />
         },
         {
-          path: "/dashboard/receipts",
-          element: <Receipts />
+          path: "/dashboard/assets",
+          element: <Assets />,
+          children: [
+            {
+              path: "/dashboard/assets/select-user",
+              element: <SelectingUser />
+            },
+            {
+              path: "/dashboard/assets/:userId",
+              element: <AssetsPage />
+            }
+          ]
         },
         {
           path: "/dashboard/staff",

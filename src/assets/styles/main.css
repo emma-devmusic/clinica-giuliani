@@ -20,3 +20,23 @@
     border-left: 3px solid gray;
     font-size: .8rem;
 }
+
+
+
+
+.login-background {
+    background-image: url(../../../public/img/giuliani/16.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.btn-primary:hover {
+    background-color: #246cba !important;
+    transition: all .2s ease;
+}
+
+.active {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
